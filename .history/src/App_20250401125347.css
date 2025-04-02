@@ -1,0 +1,77 @@
+nav.homepage-nav {
+	/*  this is the parent container */
+	width: 100vw;
+	height: 61px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid #000;
+	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25%);
+}
+
+nav.homepage-nav .logo {
+	/* this is the first div "LOGO" */
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+nav.homepage-nav :nth-child(2) {
+	/* this is the middle div */
+	width: 309px;
+	height: 24px;
+	gap: 32px;
+	/* position: relative; */
+
+	border: 2px solid rgb(0, 255, 149);
+}
+
+nav.homepage-nav :nth-child(2) a {
+	/* this is the middle div */
+	width: 309px;
+	height: 24px;
+	gap: 32px;
+	position: relative;
+
+	border: 2px solid red;
+}
+
+nav.homepage-nav :nth-child(2) a > img {
+	position: absolute;
+}
+
+.homepage-nav div:nth-child(3) {
+	/* this is the login and get started container */
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+	color: white;
+	border-radius: 12px;
+	margin-right: 50px;
+}
+
+.homepage-nav div:nth-child(3) a:nth-of-type(1) {
+	/* this is the login button */
+	background-color: #09adda;
+	color: inherit;
+	width: 157px;
+	padding: 10px;
+	padding-left: 10px;
+	border-radius: inherit;
+	/* position: relative; */
+}
+
+.homepage-nav div:nth-child(3) a:nth-of-type(2) {
+	/* this is the signup button */
+	background-color: #00517a;
+	color: inherit;
+	width: 106px;
+	padding: 10px;
+	border-radius: inherit;
+	position: absolute;
+	top: -2px;
+	right: -10px;
+	transform: translate(-1px, 0);
+}
