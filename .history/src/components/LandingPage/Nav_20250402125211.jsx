@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 export default function Nav() {
 	return (
@@ -16,7 +15,7 @@ export default function Nav() {
 						Resources
 						<img src="/assets/icons/dropdown.png" alt="dropdown icon" />
 					</a>
-					<Link to="/pricing">Pricing</Link>
+					<a href="#">Pricing</a>
 					<a href="#">Contact Us</a>
 				</div>
 

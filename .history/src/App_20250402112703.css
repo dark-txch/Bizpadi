@@ -32,8 +32,6 @@ nav.homepage-nav :nth-child(2) a {
 	width: 309px;
 	height: 24px;
 	position: relative;
-
-	cursor: pointer;
 }
 
 .homepage-nav div:nth-child(2) a:nth-of-type(1) {
@@ -192,13 +190,13 @@ nav.homepage-nav :nth-child(2) a > img {
 .landingPageImages > img:nth-of-type(5) {
 	z-index: 200;
 }
-
 .footer {
 	width: 100vw;
 	display: flex;
-	flex: 1;
-	justify-content: center;
-
+	justify-content: center; /* Centers horizontally */
+	align-items: center; /* Centers vertically */
+	height: 100vh; /* Ensures it takes the full viewport height */
+	position: relative; /* Allows absolute children to be positioned relative to it */
 	border: 2px solid orangered;
 }
 
@@ -209,16 +207,10 @@ nav.homepage-nav :nth-child(2) a > img {
 	justify-content: center;
 	align-items: center;
 
-	position: absolute;
-	top: 342px;
-	/* left: 30px; */
+	/* Remove absolute positioning */
+	/* Use margin auto to center it properly */
+	margin: auto;
 
 	z-index: 999;
-
 	border: 2px solid rgb(15, 3, 239);
-}
-
-.footer > div img {
-	height: auto;
-	width: 100%;
 }

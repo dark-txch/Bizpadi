@@ -27,15 +27,9 @@ export default function Footer() {
 					<p></p>
 				</div>
 				<div>
-					<div>
-						<img
-							src="/public/assets/images/track-sales.png"
-							alt="track-sales"
-						/>
-					</div>
-					<h1>Track Sales</h1>
-					<p></p>
+					<img src="/public/assets/images/track-sales.png" alt="track-sales" />
 				</div>
+				<h1>Track Sales</h1>
 			</section>
 		</div>
 	);

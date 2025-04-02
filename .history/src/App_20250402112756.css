@@ -32,8 +32,6 @@ nav.homepage-nav :nth-child(2) a {
 	width: 309px;
 	height: 24px;
 	position: relative;
-
-	cursor: pointer;
 }
 
 .homepage-nav div:nth-child(2) a:nth-of-type(1) {
@@ -196,9 +194,10 @@ nav.homepage-nav :nth-child(2) a > img {
 .footer {
 	width: 100vw;
 	display: flex;
-	flex: 1;
-	justify-content: center;
-
+	justify-content: center; /* Centers horizontally */
+	align-items: center; /* Centers vertically */
+	height: 100vh; /* Ensures it takes the full viewport height */
+	position: relative; /* Allows absolute children to be positioned relative to it */
 	border: 2px solid orangered;
 }
 
@@ -211,7 +210,7 @@ nav.homepage-nav :nth-child(2) a > img {
 
 	position: absolute;
 	top: 342px;
-	/* left: 30px; */
+	left: 30px;
 
 	z-index: 999;
 

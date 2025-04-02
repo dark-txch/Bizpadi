@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/LandingPage/Nav";
-import PricingPage from "./components/LandingPage/PricingPage/Pricing";
+import PricingPage from "./components/LandingPage/PricingPage";
 import MidSection from "./components/LandingPage/MidSection";
 import Footer from "./components/LandingPage/Footer";
 

@@ -34,7 +34,6 @@ export default function Footer() {
 						/>
 					</div>
 					<h1>Track Sales</h1>
-					<p></p>
 				</div>
 			</section>
 		</div>
