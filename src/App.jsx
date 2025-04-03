@@ -4,6 +4,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 // Upper imports are very important
 import Nav from "./components/LandingPage/Nav";
 import PricingPage from "./components/LandingPage/PricingPage/Pricing";
+import LogInPage from "./components/LandingPage/LogInPage/LogIn"
 import MidSection from "./components/LandingPage/MidSection";
 import Footer from "./components/LandingPage/Footer";
 
@@ -20,12 +21,11 @@ function LandingPage() {
 function App() {
 	return (
 		<Router>
-			<ErrorBoundary>
-				<Routes>
-					<Route path="/" element={<LandingPage />} />
-					<Route path="/pricing" element={<PricingPage />} />
-				</Routes>
-			</ErrorBoundary>
+			<Routes>
+				<Route path="/" element={<LandingPage />} />
+				<Route path="/pricing" element={<PricingPage />} />
+				<Route path="/login" element={<LogInPage />} />
+			</Routes>
 		</Router>
 	);
 }
