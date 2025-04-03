@@ -23,7 +23,7 @@ export default function Nav() {
 				{/* Third div */}
 				<div>
 					<img src="/assets/icons/world.png" alt="world" />
-					<a href="#">Login</a>
+					<Link to="/login">Login</Link>
 					<a href="#">Get Started</a>
 				</div>
 			</nav>
