@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------------------------ */
 /*  THIS IS THE NAV COMPONENT CSS -----------------------------------------*/
 .homepage-nav {
-	/* height: 3.5rem; */
+	width: 100%;
 	display: flex;
 	padding: 0 3rem 0;
 	font-size: 1.3rem;
