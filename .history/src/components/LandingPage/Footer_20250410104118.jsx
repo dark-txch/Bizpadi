@@ -33,7 +33,10 @@ export default function Footer() {
 				{/* 3TH CONTAINER */}
 				<div className="singleFeatureContainer ">
 					<div className="featureImageContainer">
-						<img src="/assets/images/track-profit.png" alt="track-profit" />
+						<img
+							src="/assets/images/track-profit.png"
+							alt="track-profit"
+						/>
 					</div>
 					<div className="trackProfits">
 						<h1>Track Profits</h1>
@@ -47,7 +50,10 @@ export default function Footer() {
 				{/* 4TH CONTAINER */}
 				<div className="singleFeatureContainer">
 					<div className="featureImageContainer">
-						<img src="/assets/images/track-sales.png" alt="track-sales" />
+						<img
+							src="/assets/images/track-sales.png"
+							alt="track-sales"
+						/>
 					</div>
 					<div className=" trackSales">
 						<h1>Track Sales</h1>
