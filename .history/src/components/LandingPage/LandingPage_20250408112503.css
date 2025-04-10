@@ -1,0 +1,319 @@
+/* DESKTOP WORKFLOW ------------------------------------------------- */
+
+/*  LANDING PAGE/Main container */
+@font-face {
+	font-family: "MyCustomFont";
+	src: url("/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf")
+			format("truetype"),
+		url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+/* ------------------------------------------------------------------------------- */
+/* THIS IS THE LANDING PAGE CONTAINER */
+.landingPageContainer {
+	width: 100vw;
+	min-height: 100vh;
+	font-family: "Inter", sans-serif;
+	display: grid;
+	/* grid-template-rows: 3.5rem 2fr 1fr; */
+	grid-template-rows: 3.5rem 1fr 12rem;
+
+	/* border: 2px solid red; */
+}
+
+/* ------------------------------------------------------------------------------------ */
+/*  THIS IS THE NAV CONTAINER -----------------------------------------*/
+.homepage-nav {
+	width: 100%;
+	display: flex;
+	padding: 0 3rem 0;
+	font-size: 1rem;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid #e1dfdf;
+}
+/*  THIS IS THE NAV CONTAINER CHILDREN */
+.homepage-nav .logo {
+	/* THIS IS THE LOGO CONTAINER */
+	display: flex;
+	flex: 1;
+	align-self: center;
+	height: inherit;
+}
+.homepage-nav .logo img {
+	/* THIS IS THE LOGO IMG */
+	height: 100%;
+	width: auto;
+}
+
+.homepage-nav .pricingContact {
+	/* THIS IS THE PRICING AND CONTACT US CONTAINER */
+	display: flex;
+	flex: 3;
+	justify-content: center;
+	gap: 3rem;
+	font-weight: 500;
+	line-height: 100%;
+	letter-spacing: 0%;
+}
+.homepage-nav .pricingContact a {
+	color: black;
+	cursor: pointer;
+}
+
+.homepage-nav .loginGetStarted {
+	/*THIS IS THE LOGIN AND GET STARTED CONTAINER*/
+	height: 3rem;
+	display: flex;
+	flex: 1;
+	justify-content: end;
+	align-items: center;
+	gap: 0.7rem;
+	color: white;
+	border-radius: 12px;
+}
+.homepage-nav .loginGetStarted img {
+	/* THIS IS THE LOGIN AND GET STARTED IMAGE */
+	height: 1.5rem;
+	transform: translate(1rem, 0);
+}
+.homepage-nav .loginGetStarted a:nth-of-type(1) {
+	/* THIS IS THE LOGIN BUTTON */
+	background-color: #09adda;
+	color: inherit;
+	height: inherit;
+	border-radius: inherit;
+	display: flex;
+	align-items: center;
+	padding: 0 2rem 0 0.7rem;
+	transform: translate(2rem, 0);
+}
+
+.homepage-nav .loginGetStarted a:nth-of-type(2) {
+	/* THIS IS THE GET STARTED BUTTON*/
+	background-color: #00517a;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	color: inherit;
+	height: inherit;
+	border-radius: inherit;
+	padding: 0 0.7rem;
+	position: relative;
+	z-index: 2;
+}
+
+/* ----------------------------------------------------------------------------------------------------*/
+/* MIDSECTION -------------------------------------------------------------------------------*/
+/* THIS IS THE MIDSECTION THAT HOUSES THE HEADER AND PARAGRAPH */
+.midSection {
+	display: flex;
+	width: 100vw;
+	background: linear-gradient(246.72deg, #c4f3ff 34.96%, #ffffff 90.24%);
+
+	/* border: 2px solid rgb(0, 0, 255); */
+}
+.sectionMotto {
+	/* THIS IS THE CONTAINER FOR THE HEADING AND PARAGRAPH */
+	width: 60%;
+	min-width: 40%;
+	padding: 2rem;
+
+	border: 2px solid black;
+}
+.headingParagraph {
+	width: 100%;
+	height: 100%;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center; */
+
+	border: 2px solid yellow;
+}
+.headingParagraph > h1 {
+	font-size: clamp(0.8rem, 5vw, 3.3rem);
+	font-weight: 800;
+	line-height: 140%;
+	text-transform: capitalize;
+	margin-bottom: 2rem;
+}
+.headingParagraph > h1 span {
+	color: #065d76;
+}
+.headingParagraph > p {
+	font-weight: 600;
+	font-size: clamp(0.8rem, 5vw, 1.1rem);
+	line-height: 100%;
+	letter-spacing: 0%;
+	color: #575757;
+
+	border: 2px solid yellowgreen;
+}
+
+.landingPageImages {
+	/* THIS IS THE LANDING PAGE IMAGES CONTAINER*/
+	/* width: 50%; */
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	/* padding: 3rem; */
+	overflow: hidden;
+	position: relative; /* so children can be absolutely positioned */
+
+	border: 2px solid rgb(17, 255, 0);
+}
+
+.landingPageImages > img {
+	/* border: 2px solid green; */
+	position: absolute;
+	margin-top: 2.8rem;
+}
+
+.landingPageImages > img:nth-of-type(1) {
+	/* MAIN SMILEY IMAGE */
+	border-radius: 150px;
+	width: 28rem;
+	z-index: 100;
+	/* border: 2px solid green; */
+}
+
+.landingPageImages > img:nth-of-type(2) {
+	/* THIS IS THE BLACK VECTOR */
+	width: 15rem;
+	height: 13rem;
+	transform: translate(6rem, 11rem) rotate(35deg);
+
+	/* border: 2px solid green; */
+}
+
+.landingPageImages > img:nth-of-type(3) {
+	/* EGG ROUND LIGHT BLUE VECTOR */
+	width: 15rem;
+	height: 11rem;
+	opacity: 0.63;
+	transform: translate(-6rem, -1rem);
+
+	/* border: 2px solid green; */
+}
+
+.landingPageImages > img:nth-of-type(4) {
+	/* DARK ORANGE VECTOR*/
+	/* height: 153px; */
+	height: 14rem;
+	width: 152px;
+	transform: translate(-11.5rem, 9.5rem) rotate(-15deg);
+
+	/* border: 2px solid green; */
+}
+
+.landingPageImages > img:nth-of-type(5) {
+	/* BLUE VECTOR TOP RIGHT*/
+	width: 14rem;
+	height: 15rem;
+	transform: translate(10rem, -1.8rem) rotate(6deg);
+
+	/* border: 2px solid green; */
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* FOOTER-------------------------------------------------------------------------------- */
+/* This is the footer section/container that houses the feature container */
+.footer {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	/* flex: 1; */
+	background: conic-gradient(
+		from 164.13deg at 41.58% 79.97%,
+		#115e80 0deg,
+		#3db3e6 3.6deg,
+		#115e80 360deg
+	);
+}
+
+.footerFeaturesParent {
+	width: 100%;
+	height: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: nowrap;
+	margin-top: -10rem;
+	z-index: 999;
+
+	border: 2px solid rgb(34, 0, 255);
+}
+
+/* This is the container that houses all the features in the footer */
+.singleFeatureContainer {
+	/* width: 220px; */
+	width: 13.75rem;
+	height: 18.63rem;
+	border-radius: 12px;
+	text-align: center;
+	letter-spacing: 0%;
+	box-shadow: 2px 4px 4px 2px #7d7d7d;
+	overflow: hidden;
+
+	/* border: 2px solid greenyellow; */
+}
+
+.singleFeatureContainer h1 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 100%;
+	margin-bottom: 15px;
+}
+
+.singleFeatureContainer p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 100%;
+	padding: 0 10px 0;
+}
+
+/* This is the general image container for the featuresContainer */
+.imageContainer {
+	height: 136px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+/* General styling for the images in the imageContainer */
+.imageContainer img {
+	width: 100%;
+	height: 100%;
+}
+
+/* Added colors to the backgrounds of the footer featuresContainer individually */
+.items {
+	background-color: #fff5f6;
+}
+.clients {
+	background-color: #eeffe1;
+}
+.trackProfits {
+	background-color: #fff6da;
+}
+.trackSales {
+	background-color: #eeeeee;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* MEDIA QUERY FOR MOBILE PHONES -------------------------------------- */
+@media (max-width: 850px) {
+	.landingPageContainer {
+		width: 100vw;
+		height: auto; /* Allow the container height to grow freely based on content */
+		grid-template-rows: auto 1fr auto; /* Let content section (middle) take as much space as needed */
+	}
+	.midSection {
+		flex-direction: column;
+	}
+	.footer > section {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,23 @@
+/* DESKTOP WORKFLOW ------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/* THIS IS THE LANDING PAGE CONTAINER */
+.landingPageContainer {
+	width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+	font-family: "Inter", sans-serif;
+	display: grid;
+	grid-template-rows: 3.5rem 1fr 1rem;
+
+	border: 10px solid rgb(73, 73, 73);
+}
+/* -------------------------------------------------------------------------------------------- */
+/* MEDIA QUERY FOR MOBILE PHONES -------------------------------------- */
+@media (max-width: 850px) {
+	/* MAIN CONTAINER */
+	.landingPageContainer {
+		width: 100%;
+		height: auto;
+		grid-template-rows: 3.5rem 1fr;
+	}
+}
