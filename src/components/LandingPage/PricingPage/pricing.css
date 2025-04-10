@@ -6,6 +6,12 @@
     border: none;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
 @font-face {
     font-family: "Poppins";
     src: url(".public/fonts/Poppins-Medium.ttf") format("truetype");
@@ -23,25 +29,19 @@
     src: url(".public/fonts/Poppins-Bold.ttf") format("truetype");
     font-weight: 700;
 }
-div.pricing-page{
+div.pricing-page {
+    min-height: 100vh;
     background: linear-gradient(180deg, #068FD7 0%, #034B71 100%);
-    height: 100vh;
-    position: relative;
+  }
+  
+div.back-button{
+     padding-top: 10px;
+     margin-bottom: 0;
+     margin-inline-start: 20px; 
+     cursor: pointer;
+     
 }
 
-div.pricing-page button.home{
- text-align: right;
-    width: auto;
-    height: auto;
-    background-color: hsla(0, 0%, 100%, 1);
-    border: none;
-    border-radius: 2px;
-    padding: 4px;
-    position: absolute;
-    right: 40px;
-    margin-block-start: 4px;
-
-}
 div.pricing{
     display: flex;
     flex-direction: column;
@@ -52,7 +52,6 @@ div.pricing-title{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: hsla(0, 0%, 100%, 1);
-    margin-block-start: 50px;
     margin-block-end: 20px;
     display: flex;
     flex-direction: column;
@@ -134,4 +133,5 @@ div.pricing-box{
     font-size: 18px;
     color: hsla(0, 0%, 100%, 1);
     border-radius: 8px;
+    cursor: pointer;
 }

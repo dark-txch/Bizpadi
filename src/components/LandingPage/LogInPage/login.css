@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+
+@font-face {
+	font-family: "MyCustomFont";
+	src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+}
+/* page wrapper  */
+div.page-wrapper {
+  position: relative; 
+  overflow: hidden; 
+  min-height: 100vh;
+  font-family: "MyCustomFont", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+div.page-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/loginbckg.svg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+div.hero-container{
+  position: relative;     
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+}
+
+/* left-side parent container div */
+div.loginContainer {
+    background: linear-gradient(180deg, #666666 0%, #000000 100%);
+    color: hsla(0, 0%, 100%, 1);
+    width: 40%; 
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+ 
+
+ div.mainItems {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+  }
+
+  .mainItems h2{
+    margin-top: 0;
+   font-weight: 600;
+   font-size: 24px;
+   width: 12rem;
+  }
+
+  .mainItems input{
+    width: 24.25rem;
+    height: 2.87rem;
+    background-color: hsla(0, 0%, 100%, 1);
+    border: 1px solid hsla(0, 0%, 0%, 1);
+    border-radius: 12px;
+    padding: 15px;
+    font-weight: 400;
+  }
+
+  /* form group */
+  form > input:focus{
+      border-color: hsla(201, 98%, 45%, 1);
+    
+  }
+  form input:first-of-type {
+    margin-bottom: 12px
+  }
+
+  div.input-wrapper{
+    position: relative;
+  }
+  div.input-wrapper button {
+    position: absolute;
+    right: 10px;
+    top: 25%;
+    cursor: pointer;
+    background: none;
+  }
+
+   button.login{
+    width: 24.25rem;
+    height: 2.87rem;
+    background-color: hsla(200, 100%, 24%, 1);
+    border: none;
+    border-radius: 12px;
+    padding: 16px, 24px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: hsla(0, 0%, 100%, 1);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+/* login with google or facebook btns */
+  p.first{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  button.google-btn, button.facebook-btn{
+    width: 24.25rem;
+    height: 2.87rem;
+    border: none;
+    border-radius: 12px;
+    padding-inline-start: 15px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    color: hsla(0, 0%, 49%, 1);
+    font-weight: 600;
+    margin-block-end: 12px;
+  }
+
+  /* forgot password div */
+   div.forgot-password{
+    margin-inline-start: 50px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+
+  /* right-side container */
+  div.right-side{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-inline-start: 90px;
+    color: hsla(0, 0%, 100%, 1);
+  }
+  @font-face {
+  font-family: "otomanopee";
+  src: url("/fonts/otomanopee/fonts/ttf/OtomanopeeOne-Regular.ttf");
+ }
+
+ div.right-side h3{
+  font-family: "otomanopee";
+  text-shadow: 2px 2px 0 hsla(0, 0%, 49%, 1);
+  font-size: 40px;
+  font-weight: 400;
+ }
+
+ div.right-side p{
+  font-family: "MyCustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-shadow: 0.5px 0.5px 0 hsla(0, 0%, 49%, 1);
+ }

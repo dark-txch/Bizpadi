@@ -6,7 +6,7 @@ export default function Footer() {
 				<div className="featuresContainer items">
 					{/* The feautureOntainer class is given to all the divs housing the features */}
 					<div className="imageContainer">
-						<img src="/public/assets/images/client-1.png" alt="client-1" />
+						<img src="/assets/images/client-1.png" alt="client-1" />
 					</div>
 					<h1>Items</h1>
 					<p>Keep track of the items in your stock, stay ahead.</p>
@@ -14,7 +14,7 @@ export default function Footer() {
 
 				<div className="featuresContainer clients">
 					<div className="imageContainer">
-						<img src="/public/assets/images/client-2.png" alt="client-2" />
+						<img src="/assets/images/client-2.png" alt="client-2" />
 					</div>
 					<h1>Clients</h1>
 					<p>
@@ -40,7 +40,7 @@ export default function Footer() {
 				<div className="featuresContainer trackSales">
 					<div className="imageContainer">
 						<img
-							src="/public/assets/images/track-sales.png"
+							src="/assets/images/track-sales.png"
 							alt="track-sales"
 						/>
 					</div>

@@ -7,14 +7,17 @@ import PricingPage from "./components/LandingPage/PricingPage/Pricing";
 import LogInPage from "./components/LandingPage/LogInPage/LogIn"
 import MidSection from "./components/LandingPage/MidSection";
 import Footer from "./components/LandingPage/Footer";
+import SignUp from "./components/LandingPage/SignUp/SignUp";
+import Welcome from "./components/LandingPage/SignUp/welcome";
+import WelcomeSecond from "./components/LandingPage/SignUp/welcomeSecond"
 
 function LandingPage() {
 	return (
-		<>
+		<div className="parentContainer">
 			<Nav />
 			<MidSection />
 			<Footer />
-		</>
+		</div>
 	);
 }
 
@@ -25,6 +28,10 @@ function App() {
 				<Route path="/" element={<LandingPage />} />
 				<Route path="/pricing" element={<PricingPage />} />
 				<Route path="/login" element={<LogInPage />} />
+				<Route path="/signUp" element={<SignUp/>} />
+				<Route path="/welcome" element={<Welcome />} />
+				<Route path="/welcomeSecond" element={<WelcomeSecond/>} />
+
 			</Routes>
 		</Router>
 	);

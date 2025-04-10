@@ -9,10 +9,19 @@
 	font-style: normal;
 }
 
+/* ParentContainer that houses the landing page */
+div.parentContainer{
+	min-height: 100%;
+	min-width: 100%;
+	display: grid;
+	grid-template-rows: 5% 60% 35%;
+	border: 2px solid red;
+}
+
 nav.homepage-nav {
 	/*  this is the parent container */
 	width: 100vw;
-	height: 61px;
+	/* height: 61px; */
 	display: flex;
 	flex-grow: 1;
 	min-width: 150px;
@@ -110,18 +119,18 @@ nav.homepage-nav :nth-child(2) a > img {
 /* MIDSECTION -------------------------------------------------------------------------------*/
 /* This is the middle section of the landing page */
 .midSection {
-	height: 473px;
+	/* height: 473px; */
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	position: relative;
-
 	background: linear-gradient(246.72deg, #c4f3ff 34.96%, #ffffff 90.24%);
 }
 
 .landingPageMotto {
 	/* This is the container for the h1 MOTTO and paragraph */
 	display: inline-block;
-	width: 647px;
+	/* width: 647px; */
 	height: 200px;
 	/* margin-left: 150px; */
 	margin-left: 180px;
@@ -130,9 +139,9 @@ nav.homepage-nav :nth-child(2) a > img {
 
 .landingPageMotto > h1 {
 	width: 538px;
-	height: 96px;
+	/* height: 96px; */
 	font-weight: 800;
-	font-size: 50px;
+	font-size: 40px;
 	/* line-height: 100%; */
 	line-height: 120%;
 	text-transform: capitalize;
@@ -215,8 +224,8 @@ nav.homepage-nav :nth-child(2) a > img {
 	width: 100vw;
 	display: flex;
 	justify-content: center;
-	flex: 1;
-	height: calc(100vh - 534px);
+	/* flex: 1; */
+	/* height: calc(100vh - 534px); */
 	background: conic-gradient(
 		from 164.13deg at 41.58% 79.97%,
 		#115e80 0deg,
@@ -232,9 +241,11 @@ nav.homepage-nav :nth-child(2) a > img {
 	justify-content: center;
 	align-items: center;
 	gap: 14px;
-	position: absolute;
-	top: 400px;
+	/* position: absolute; */
+	/* top: 400px; */
 	z-index: 999;
+	border: 2px solid green;
+	margin-top: -135px;
 }
 
 /* This is the container that houses all the features in the footer */

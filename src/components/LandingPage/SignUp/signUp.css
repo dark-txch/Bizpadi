@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "MyCustomFont";
+    src: url("fonts/Inter/Inter-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: "Otomanopee";
+    src: url("fonts/otomanopee/fonts/ttf/OtomanopeeOne-Regular.ttf");
+}
+
+div.hero-signup{
+    position: relative;     
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+  }
+
+  /* left side container */
+  div.hero-left-side {
+    background: linear-gradient(180deg, #666666 0%, #000000 100%);
+    color: hsla(0, 0%, 100%, 1);
+    width: 40%; 
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+} 
+
+div.hero-left-side h2{
+    text-align: center;
+    font-family: "MyCustomFont", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* let side form group */
+form.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > input, div.div-wrapper{
+        width: 24.25rem;
+        height: 2.87rem;
+        background-color: hsla(0, 0%, 100%, 1);
+        border: 1px solid hsla(0, 0%, 0%, 1);
+        border-radius: 12px;
+        padding: 15px;
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+}
+.form-group input:focus {
+  border-color: hsla(201, 98%, 45%, 1);
+}
+
+div.div-wrapper{
+    position: relative;
+}
+div.div-wrapper button{
+    background: none;
+    position: absolute;
+    right: 10px;
+}
+
+form .reg-btn{
+    width: 24.25rem;
+    height: 2.87rem;
+    background-color: hsla(200, 100%, 24%, 1);
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 14px;
+    margin-top: 10px;
+    font-family: "MyCustomFont", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: hsla(0, 0%, 100%, 1);
+}
+ p.other{
+   font-family: "MyCustomFont",sans-serif;
+   margin-bottom: 9px;
+   font-weight: 600;
+   font-size: 18px;
+   text-align: center;
+}
+
+section.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.ggl-btn, button.fb-btn{
+    width: 24.25rem;
+    height: 2.87rem;
+    border: none;
+    border-radius: 12px;
+    padding-inline-start: 15px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    color: hsla(0, 0%, 49%, 1);
+    font-weight: 600;
+    margin-block-end: 12px;
+  }
+  p.sign-in {
+   font-family: "MyCustomFont",sans-serif;
+   font-weight: 600;
+   font-size: 12px;
+   text-align: center;
+  }
+
+  p > span{
+    color: hsla(225, 100%, 50%, 1);
+    font-weight: 700;
+  }
+
+
+  /* hero right side */
+  div.hero-right-side{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-inline-start: 90px;
+    color: hsla(0, 0%, 100%, 1);
+  }
+
+  @font-face {
+    font-family: "otomanopee";
+    src: url("/fonts/otomanopee/fonts/ttf/OtomanopeeOne-Regular.ttf");
+   }
+  
+   div.hero-right-side h3{
+    font-family: "otomanopee";
+    text-shadow: 2px 2px 0 hsla(0, 0%, 49%, 1);
+    font-size: 40px;
+    font-weight: 400;
+   }
+  
+   div.hero-right-side p{
+    font-family: "MyCustomFont", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-shadow: 0.5px 0.5px 0 hsla(0, 0%, 49%, 1);
+   }

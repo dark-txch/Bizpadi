@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom"
 import "./pricing.css"
+import { FaHouse } from "react-icons/fa6";
 
 export default function Pricing(){
-    return(
+    return(                
+
         <div className="pricing-page">
              <div className="back-button">
                 <Link to="/">
-                <button className="home">← Home</button>
+                    <FaHouse size={24} color="white"/>
                 </Link>
             </div>
             <div className="pricing">

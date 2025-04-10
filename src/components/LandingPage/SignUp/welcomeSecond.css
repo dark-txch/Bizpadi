@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Otomanopee";
+    src: url("fonts/otomanopee/fonts/ttf/OtomanopeeOne-Regular.ttf");
+  }
+
+div.abt-biz{
+  width: 100wh;
+  height: 100vh;
+  display: flex;
+  background-color: blue;
+}
+/* left side container */
+div.biz-form{
+    width: 50%;
+    background-color: white;
+}
+
+.biz-form h2{
+    font-family:"Otomanopee", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: hsla(198, 100%, 25%, 1);
+    text-align: center;
+    margin-block-start: 2rem;
+}
+
+.biz-form p{
+    max-width: 33rem;
+    margin-inline-start: 2.8rem;
+    margin-block-end: 1rem;
+    font-family: "MyCustomFont", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: hsla(198, 100%, 25%, 1);
+}
+
+form.form-frame{
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+}
+
+form.form-frame label,
+form.form-frame input,
+form.form-frame select{
+    display: block;
+}
+
+div.frame{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}

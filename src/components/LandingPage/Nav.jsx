@@ -24,7 +24,7 @@ export default function Nav() {
 				<div>
 					<img src="/assets/icons/world.png" alt="world" />
 					<Link to="/login">Login</Link>
-					<a href="#">Get Started</a>
+					<Link to="/signUp">Get Started</Link>
 				</div>
 			</nav>
 		</>
