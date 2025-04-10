@@ -1,0 +1,116 @@
+/* ------------------------------------------------------------------------------------ */
+/*  THIS IS THE NAV COMPONENT CSS -----------------------------------------*/
+.homepage-nav {
+	/* height: 3.5rem; */
+	display: flex;
+	padding: 0 3rem 0;
+	font-size: 1.3rem;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid #e1dfdf;
+}
+
+/*  NAV CONTAINER CHILDREN */
+.homepage-nav .logo {
+	/* LOGO CONTAINER */
+	display: flex;
+	flex: 1;
+	align-self: center;
+	height: inherit;
+}
+
+.homepage-nav .logo img {
+	/*  LOGO IMG */
+	height: 100%;
+	width: auto;
+}
+
+.homepage-nav .pricingContact {
+	/* PRICING AND CONTACT US CONTAINER */
+	display: flex;
+	flex: 3;
+	justify-content: center;
+	gap: 3rem;
+	font-weight: 500;
+	line-height: 100%;
+	letter-spacing: 0%;
+}
+
+.homepage-nav .pricingContact a {
+	color: black;
+	cursor: pointer;
+}
+
+.homepage-nav .pricingContact a:hover {
+	color: #09adda;
+}
+
+.homepage-nav .loginGetStarted {
+	/* LOGIN AND GET STARTED CONTAINER*/
+	height: 3rem;
+	display: flex;
+	flex: 1;
+	justify-content: end;
+	align-items: center;
+	gap: 0.7rem;
+	color: white;
+	border-radius: 12px;
+}
+
+.homepage-nav .loginGetStarted img {
+	/* LOGIN AND GET STARTED IMAGE */
+	height: 1.5rem;
+	transform: translate(1rem, 0);
+}
+
+.homepage-nav .loginGetStarted a:nth-of-type(1) {
+	/* LOGIN BUTTON */
+	background-color: #09adda;
+	color: inherit;
+	height: inherit;
+	border-radius: inherit;
+	display: flex;
+	align-items: center;
+	padding: 0 2rem 0 0.7rem;
+	transform: translate(2rem, 0);
+}
+
+.homepage-nav .loginGetStarted a:nth-of-type(1):hover {
+	background-color: #30d2ff;
+	color: rgb(0, 0, 0);
+}
+
+.homepage-nav .loginGetStarted a:nth-of-type(2) {
+	/* THIS IS THE GET STARTED BUTTON*/
+	background-color: #00517a;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	color: inherit;
+	height: inherit;
+	border-radius: inherit;
+	padding: 0 0.7rem;
+	position: relative;
+	z-index: 2;
+}
+
+.homepage-nav .loginGetStarted a:nth-of-type(2):hover {
+	background-color: #012435;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* MEDIA QUERY */
+/* -------------------------------------------------------------------------------------------- */
+@media (max-width: 850px) {
+	.homepage-nav {
+		/* height: 5rem; */
+		padding: 0 1.5rem 0 0;
+	}
+
+	.homepage-nav .pricingContact {
+		gap: 1.8rem;
+	}
+}
+/* -------------------------------------------------------------------------------------------- */
+/* THE END */
+/* -------------------------------------------------------------------------------------------- */

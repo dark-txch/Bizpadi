@@ -1,10 +1,10 @@
-import "./App.css";
+import "./components/LandingPage/LandingPage.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 // Upper imports are very important
 import Nav from "./components/LandingPage/Nav";
 import PricingPage from "./components/LandingPage/PricingPage/Pricing";
-import LogInPage from "./components/LandingPage/LogInPage/LogIn"
+import LogInPage from "./components/LandingPage/LogInPage/LogIn";
 import MidSection from "./components/LandingPage/MidSection";
 import Footer from "./components/LandingPage/Footer";
 import SignUp from "./components/LandingPage/SignUp/SignUp";
@@ -13,17 +13,21 @@ import WelcomeSecond from "./components/LandingPage/SignUp/welcomeSecond"
 
 function LandingPage() {
 	return (
-		<div className="parentContainer">
-			<Nav />
-			<MidSection />
-			<Footer />
-		</div>
+		<>
+			<div className="landingPageContainer">
+				<Nav />
+				<MidSection />
+				<Footer />
+			</div>
+		</>
 	);
 }
 
 function App() {
 	return (
 		<Router>
+			{" "}
+			{/* This sets the base path for all routes */}
 			<Routes>
 				<Route path="/" element={<LandingPage />} />
 				<Route path="/pricing" element={<PricingPage />} />
