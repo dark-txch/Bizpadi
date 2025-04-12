@@ -55,6 +55,8 @@ export default function Welcome(){
                         <label htmlFor="info">
                             How did you hear about us?
                             {/* <select value={selectedOption} onChange={handleChange}> */}
+
+                            {/* remember to move the dropdown select icon */}
                             <select id="info">
                                <option  disabled selected value="">
                                 Please choose an option
@@ -68,27 +70,8 @@ export default function Welcome(){
                         </label>
 
                         <div className="btns">
-                            <Link style={{
-                                backgroundColor:"hsla(201, 100%, 24%, 1)",
-                                width: "4.0625rem",
-                                padding:"12px",
-                                borderRadius:"12px",
-                                color:"hsla(0, 0%, 100%, 1)",
-                                fontWeight: "600",
-                                fontSize:"18px",
-                                border:"none",
-                                marginRight:"10px"
-                                }}to="/welcomeSecond">Next</Link>
-                            <Link style={{
-                               backgroundColor:"hsla(201, 100%, 24%, 1)",
-                               width: "4rem",
-                               padding:"12px",
-                               borderRadius:"12px",
-                               color:"hsla(0, 0%, 100%, 1)",
-                               fontWeight: "600",
-                               fontSize:"18px",
-                               border:"none"
-                            }}to="/signup">Back</Link>
+                            <Link className="btn back-btn" to="/signup">Back</Link>
+                            <Link className="btn next-btn" to="/welcomeSecond">Next</Link>
                         </div>
                     </div>
                 </form>

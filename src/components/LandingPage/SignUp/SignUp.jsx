@@ -12,8 +12,7 @@ export default function SignUp(){
                     <Link to="/">
                          <FaHouse
                             size={36}
-                            color="white"
-                            style={{ marginBlockStart: '5px', marginBlockEnd:"0",padding: '8px' }}
+                            className="btn-home"
                          />
                     </Link>
                     <h2>Sign up</h2>
@@ -74,14 +73,13 @@ export default function SignUp(){
                            Sign up with Google
                         </button>
                         <button className="fb-btn">
-                           <img src="/assets/icons/icons8-facebook.svg" style={{width:"25px", height:"25px"}} alt="facebook icon" />
+                           <img src="/assets/icons/logos_facebook.svg" alt="facebook icon" />
                            Sign up with Facebook
                         </button>
                     </section>
                     <p className="sign-in">
                         Already have an account?      
-                        <Link to="/login" style={{color: "hsla(225, 100%, 50%, 1)", 
-                            fontWeight: "700"}}>    Sign in</Link>
+                        <Link to="/login"> Sign in</Link>
                     </p>
                     
                 </div>

@@ -64,7 +64,6 @@ form.form2 label{
   font-family: "MyCustomFont", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  /* margin-bottom: 15px; */
 }
 
 form.form2 input,
@@ -75,6 +74,7 @@ form.form2 select{
   border: 1px solid hsla(0, 0%, 0%, 1);
   box-shadow: 0px 2px 2px 0px hsla(0, 0%, 0%, 0.25);
   margin-block-start: 8px;
+  margin-block-end: 1rem;
   padding: 10px; 
 }
 
@@ -83,12 +83,17 @@ form.form2 input.name-btn{
   height: 2.875rem;
 }
 
-form.form2 input:focus{
+form.form2 input:focus, 
+form.form2 input:hover{
   border-color: hsla(201, 98%, 45%, 1);
 }
+
+/* remember to move the dropdown select icon */
 form.form2 select{
   margin-bottom: 12px;
+  appearance: none;
 }
+
 div.personal-info{
   display: flex;
   gap: 20px;
@@ -98,6 +103,24 @@ div.btns{
   margin-block-start: 12px;
   margin-inline-start: 17rem;
 }
+
+.btn{
+  background-color: hsla(201, 100%, 24%, 1);
+  padding: 12px;
+   border-radius: 12px;
+  color: hsla(0, 0%, 100%, 1);
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  text-decoration: none;
+}
+
+.back-btn {
+  margin-right: 10px;
+}
+
+
+
 /* right side container */
 div.rightside-blue{
   background: linear-gradient(195.43deg, #01527D 10.81%, #0295E3 55.03%);
@@ -189,3 +212,64 @@ div.vector{
     font-size: 14px;
     color: hsla(0, 0%, 100%, 1);
   }
+
+
+  /* MEDIA QUERIES FOR MOBILE */
+  /* Styles for small screens up to large screens */
+  @media (min-width:320px) and (max-width: 600px) {
+    div.rightside-blue{
+      display: none;
+    }
+  
+    
+   
+    div.leftside-white{
+      display: block;
+      width: 100%;
+      margin-inline-start: 2rem;
+    }
+  
+    .leftside-white h2{
+     font-size: 18px;
+     margin-block-end: 0.5rem;
+    }
+    .leftside-white h3{
+      font-size: 15px;
+    }
+    .leftside-white p{
+      font-size: 13px;
+    }
+
+    
+    form.form2 input.name-btn{
+      width: 9.8rem;
+      height: 2.875rem;
+    }
+  
+    form.form2 input,
+    form.form2 select{
+      width: 21rem;
+    }
+
+    div.btns{
+      margin-inline-start: 12rem;
+    }
+  
+  } 
+
+  /* MEDIA QUERIES FOR TABLET */
+  
+  @media (min-width: 601px) and (max-width:1024px) {
+    div.rightside-blue{
+      display: none;
+    }
+  
+   
+    div.leftside-white{
+      display: block;
+      width: 100%;
+      margin-inline-start: 2rem;
+    }
+   
+  }
+  

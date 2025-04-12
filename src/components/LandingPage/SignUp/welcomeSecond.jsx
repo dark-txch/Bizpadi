@@ -38,45 +38,27 @@ export default function WelcomeSecond(){
                           required
                           />
                     </label>
-                    <label htmlFor="currency" className="estimate">
-                        What’s your estimated revenue this year?
-                        <select name="currency" id="currency">
-                            <option value=""> Naira (NGN) - ₦</option>
-                            <option value=""> US Dollar (USD) - $ </option>
-                            <option value=""> Euro (EUR) - €</option>
-                        </select>
-                        <input
-                        type="text"
-                        id="currency"
-                        placeholder="Estimated revenue"
-                        required
-                         />
+                    <label htmlFor="currency">
+                        What is your estimated revenue this year?
+                        <div className="estimate">
+                          <select name="currency" id="currency">
+                              <option value=""> Naira (NGN) - ₦</option>
+                              <option value=""> US Dollar (USD) - $ </option>
+                              <option value=""> Euro (EUR) - €</option>
+                          </select>
+                          <input
+                          type="text"
+                          id="currency"
+                          placeholder="Estimated revenue"
+                          required
+                           />
+                        </div>
                     </label>
                 </div>
 
                 <div className="biz-btns">
-                            <Link style={{
-                                backgroundColor:"hsla(0, 0%, 100%, 1)",
-                                width: "3.7rem",
-                                padding:"10px",
-                                borderRadius:"12px",
-                                color:"hsla(0, 0%, 0%, 1)",
-                                boxShadow: "2px 4px 4px 0px hsla(0, 0%, 0%, 0.2)",
-                                fontWeight: "600",
-                                fontSize:"18px",
-                                border:"none",
-                                marginRight:"10px"
-                                }}to="/welcome">Back</Link>
-                            <Link style={{
-                               backgroundColor:"hsla(201, 100%, 24%, 1)",
-                               width: "7rem",
-                               padding:"10px",
-                               borderRadius:"12px",
-                               color:"hsla(0, 0%, 100%, 1)",
-                               fontWeight: "600",
-                               fontSize:"18px",
-                               border:"none"
-                            }}to="">Save and Finish</Link>
+                            <Link className="biz-btn back-btn" to="/welcome">Back</Link>
+                            <Link className="biz-btn finish-btn" to="/dashboard">Save and Finish</Link>
                         </div>
                </form>
 

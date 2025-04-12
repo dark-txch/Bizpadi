@@ -44,12 +44,18 @@ div.hero-container{
 div.loginContainer {
     background: linear-gradient(180deg, #666666 0%, #000000 100%);
     color: hsla(0, 0%, 100%, 1);
-    width: 40%; 
+    width: 45%; 
     height: 100%;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
  
+.home-btn {
+  margin-block-start: 5px;
+  margin-block-end: 0;
+  padding: 8px;
+  color: white; 
+}
 
  div.mainItems {
     display: flex;
@@ -132,15 +138,30 @@ div.loginContainer {
 
   /* forgot password div */
    div.forgot-password{
-    margin-inline-start: 50px;
+    margin-inline-start: 75px;
     font-size: 12px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  .forgot-password p:first-child {
+    margin-right: 45px;
+  }
+  
+  .forgot-password p:last-of-type {
+    margin-right: 8px;
+  }
+  
+  .forgot-password a {
+    color: hsla(225, 100%, 50%, 1);
+    text-decoration: none;
   }
 
 
   /* right-side container */
   div.right-side{
-    width: 60%;
+    width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,3 +187,124 @@ div.loginContainer {
   font-size: 24px;
   text-shadow: 0.5px 0.5px 0 hsla(0, 0%, 49%, 1);
  }
+
+
+ /* MEDIA QUERIES FOR MOBILE*/
+  /* Styles for small screens up to large screens */
+  @media (min-width:320px) and (max-width: 600px) {
+  div.right-side{
+    display: none;
+  }
+
+  div.page-wrapper::before{
+    background: none;
+  }
+ 
+  div.hero-container{
+    display: block;
+  }
+
+
+ div.loginContainer{
+  width: 100%;
+  background: none;
+  margin-inline-start: 0.5rem;
+ }
+
+ a .home-btn{
+  color: hsla(198, 100%, 25%, 1);
+    padding: 4px;
+    margin-block-start: 2px;
+    /* font-size: 28px; */
+  }
+  .mainItems h2{
+   color: hsla(198, 100%, 25%, 1);
+   margin-block-end: 1rem;
+   font-size: 16px;
+  }
+
+  .mainItems input{
+    width: 17rem;
+    height: 1.87rem;
+    background-color: hsla(0, 0%, 100%, 1);
+    border: 1px solid hsla(0, 0%, 0%, 1);
+    border-radius: 12px;
+     padding: 2vw;
+    font-weight: 400;
+    /* margin-inline-start: 4rem; */
+  }
+
+  /* div.input-wrapper button {
+    right: 10px;
+  } */
+
+  button.login{
+    width: 17rem;
+    height: 1.87rem;
+    margin-top: 1rem;
+  }
+
+  p.first{
+    color: hsla(198, 100%, 25%, 1); ;
+  }
+
+  button.google-btn, button.facebook-btn{
+    width: 17rem;
+    height: 1.87rem;
+    color: hsl(211, 76%, 36%)
+  }
+
+  div.forgot-password{
+    color: hsl(0, 0%, 0%);
+    font-size: 8px;
+    margin-inline-start: 1rem;
+  }
+} 
+
+
+/* MEDIA QUERIES FOR TABLET*/
+@media (min-width: 601px) and (max-width:1024px) {
+  div.right-side{
+    display: none;
+  }
+
+  div.page-wrapper::before{
+    background: none;
+  }
+ 
+  div.hero-container{
+    display: block;
+  }
+
+
+ div.loginContainer{
+  width: 100%;
+  background: none;
+  margin-inline-start: 2rem;
+ }
+
+ a .home-btn{
+  color: hsla(198, 100%, 25%, 1);
+    padding: 4px;
+    margin-block-start: 2px;
+    /* font-size: 28px; */
+  }
+  .mainItems h2{
+   color: hsla(198, 100%, 25%, 1);
+   margin-block-end: 1rem;
+   font-size: 24px;
+  }  
+
+  p.first{
+    color: hsla(198, 100%, 25%, 1); ;
+  }
+
+
+  div.forgot-password{
+    color: hsl(0, 0%, 0%);
+    font-size: 12px;
+    justify-content: center;
+    justify-self: center;
+    /* margin-inline-start: 1rem; */
+  }
+}

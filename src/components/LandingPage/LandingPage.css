@@ -2,12 +2,12 @@
 /* ------------------------------------------------------------------------------- */
 /* THIS IS THE LANDING PAGE CONTAINER */
 .landingPageContainer {
-	width: 100vw;
+	width: 100%;
 	min-height: 100vh;
 	overflow: hidden;
 	font-family: "Inter", sans-serif;
 	display: grid;
-	grid-template-rows: 3.5rem 1fr 15rem;
+	grid-template-rows: 3.5rem 1fr 10rem;
 
 	/* border: 10px solid rgb(73, 73, 73); */
 }

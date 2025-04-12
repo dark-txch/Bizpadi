@@ -4,10 +4,9 @@
   }
 
 div.abt-biz{
-  width: 100wh;
+  width: 100vw;
   height: 100vh;
   display: flex;
-  background-color: blue;
 }
 /* left side container */
 div.biz-form{
@@ -22,11 +21,14 @@ div.biz-form{
     color: hsla(198, 100%, 25%, 1);
     text-align: center;
     margin-block-start: 2rem;
+    /* margin-block-end: 1rem; */
 }
 
 .biz-form p{
-    max-width: 33rem;
-    margin-inline-start: 2.8rem;
+    width: 90%;
+    /* border: 2px solid red; */
+    /* text-align: center; */
+    margin-inline-start: 2.8rem; 
     margin-block-end: 1rem;
     font-family: "MyCustomFont", sans-serif;
     font-weight: 700;
@@ -52,3 +54,222 @@ div.frame{
     flex-direction: column;
     align-content: flex-start;
 }
+
+.frame label{
+  font-family: "MyCustomFont", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.frame input{
+  width: 26.1875rem;
+  height: 2.875rem;
+  border-radius: 12px;
+  border: 1px solid hsla(0, 0%, 0%, 1);
+  box-shadow: 0px 2px 2px 0px hsla(0, 0%, 0%, 0.25);
+  margin-block-start: 8px;
+  margin-block-end: 1rem;
+  padding: 10px; 
+}
+.frame input:focus,
+.frame input:hover{
+  border-color: hsla(201, 98%, 45%, 1);
+}
+
+div.estimate{
+  display: flex;
+  gap: 1.25rem;
+}
+
+.estimate select{
+  appearance: none;
+}
+
+.estimate select,
+.estimate input{
+  display: block;
+  width: 12.4rem;
+  height: 2.875rem;
+  border-radius: 12px;
+  border: 1px solid hsla(0, 0%, 0%, 1);
+  box-shadow: 0px 2px 2px 0px hsla(0, 0%, 0%, 0.25);
+  margin-block-start: 8px;
+  margin-block-end: 1.5rem;
+  padding: 10px; 
+}
+
+div.biz-btns{
+  margin-inline-start: 11rem;
+  margin-block-start: 1rem;
+}
+
+.biz-btn {
+  background-color: hsla(201, 100%, 24%, 1);
+  padding: 10px;
+  border-radius: 12px;
+  color: hsla(0, 0%, 100%, 1);
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  text-decoration: none; /* removes underline */
+}
+
+.biz-btn .back-btn {
+  margin-right: 25px;
+}
+
+
+
+
+
+/* rightside container stage */
+div.stage{
+  background: linear-gradient(195.43deg, #01527D 10.81%, #0295E3 55.03%);
+  width: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+div.vector3{
+  position: absolute;
+  top: 40%; 
+  left: 35%; 
+  transform: translate(-50%, -50%);
+  z-index: -1; 
+}
+
+.vector3 img:nth-child(1) {
+  transform: translateX(30px); 
+}
+
+.vector3 img:nth-child(2) {
+  transform: translateX(0); 
+}
+
+
+.diagram3 {
+  margin-block-start: 6.875rem;
+  margin-inline-start: 4.0625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step3 {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.step3 p{
+  font-family: "MyCustomFont", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.circle3 {
+  width: 38px;
+  height: 38px;
+  background-color:hsla(0, 0%, 100%, 1);
+  color: hsla(0, 0%, 0%, 1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "MyCustomFont", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.line3 {
+  width: 4px;
+  height: 60px;
+  background-color: hsla(0, 0%, 100%, 1);
+  margin-left: 17px; 
+}
+
+section.bottom3{
+  display: flex;
+  gap:3.5rem ;
+  margin-inline-start: 6.125rem;
+  margin-block-start: 15rem;
+}
+
+div.contact-us3,
+div.log-out3{
+  display: flex;
+  gap: 1rem;
+  font-family: "MyCustomFont", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 1);
+}
+
+
+/* MEDIA QUERIES FOR MOBILE*/
+  /* Styles for small screens up to large screens */
+  @media (min-width:320px) and (max-width: 600px) {
+    div.stage{
+      display: none;
+    }
+  
+    div.abt-biz{
+      margin-inline-start: 3rem;
+    }
+   
+    div.biz-form{
+      display: block;
+      width: 100%;
+      
+    }
+  
+    .biz-form h2{
+     font-size: 18px;
+     margin-block-end: 0.5rem;
+    }
+    
+    .biz-form p{
+      font-size: 13px; 
+      margin-inline-start: 0; 
+    }
+
+    
+    form .frame input{
+      width: 17rem;
+      height: 2.875rem;
+    }
+  
+    .estimate select,
+    .frame .estimate input{
+      width: 8rem;
+      font-size: 11px;
+    }  
+
+    div.biz-btns{
+      margin-inline-start: 3rem;
+    }
+  
+  } 
+  
+
+  /* MEDIA QUERIES FOR TABLET */
+
+  @media (min-width: 601px) and (max-width:1024px) {
+    div.stage{
+      display: none;
+    }
+  
+   
+    div.biz-form{
+      display: block;
+      width: 100%;
+      margin-inline-start: 2rem;
+    }
+    .biz-form p {
+      text-align: center;
+      margin-inline-start: 0; 
+    }
+   
+  }
+  

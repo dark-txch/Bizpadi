@@ -1,0 +1,47 @@
+.sidebar {
+  width: 229px;
+  height: 100vh;
+  background: hsla(193, 91%, 39%, 1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+   padding-top: 25px; 
+}
+
+.search-bar {
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+ nav img{
+  margin-right: 4px;
+  /* text-align: center; */
+  
+} 
+
+nav a.active {
+  background: #3b82f6;
+}
+
+.logout-btn {
+  margin-top: auto;
+  padding: 10px;
+  background: #ef4444;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+ 

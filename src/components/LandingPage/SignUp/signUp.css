@@ -19,11 +19,17 @@ div.hero-signup{
   div.hero-left-side {
     background: linear-gradient(180deg, #666666 0%, #000000 100%);
     color: hsla(0, 0%, 100%, 1);
-    width: 40%; 
+    width: 45%; 
     height: 100%;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 } 
+
+a .btn-home{
+  color: hsl(0, 0%, 100%);
+  padding: 4px;
+  margin-block-start: 5px;
+ }
 
 div.hero-left-side h2{
     text-align: center;
@@ -39,18 +45,30 @@ form.form-group{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    > input, div.div-wrapper{
-        width: 24.25rem;
-        height: 2.87rem;
-        background-color: hsla(0, 0%, 100%, 1);
-        border: 1px solid hsla(0, 0%, 0%, 1);
-        border-radius: 12px;
-        padding: 15px;
-        font-weight: 400;
-        margin-bottom: 12px;
-    }
 }
+
+form.form-group input{
+    width: 24.25rem;
+    height: 2.87rem;
+    background-color: hsla(0, 0%, 100%, 1);
+    border: 1px solid hsla(0, 0%, 0%, 1);
+    border-radius: 12px;
+    padding: 15px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+ .div-wrapper input{
+    width: 24.25rem;
+    height: 2.87rem;
+    background-color: hsla(0, 0%, 100%, 1);
+    border: 1px solid hsla(0, 0%, 0%, 1);
+    border-radius: 12px;
+    padding: 15px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
 .form-group input:focus {
   border-color: hsla(201, 98%, 45%, 1);
 }
@@ -62,9 +80,13 @@ div.div-wrapper button{
     background: none;
     position: absolute;
     right: 10px;
+    top: 15px;
 }
 
 form .reg-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24.25rem;
     height: 2.87rem;
     background-color: hsla(200, 100%, 24%, 1);
@@ -107,22 +129,28 @@ button.ggl-btn, button.fb-btn{
     font-weight: 600;
     margin-block-end: 12px;
   }
+
+
   p.sign-in {
    font-family: "MyCustomFont",sans-serif;
    font-weight: 600;
    font-size: 12px;
    text-align: center;
   }
+  p > a{
+    color: hsla(225, 100%, 50%, 1); 
+      font-weight: 700;
+  }
 
-  p > span{
+  /* p > span{
     color: hsla(225, 100%, 50%, 1);
     font-weight: 700;
-  }
+  } */
 
 
   /* hero right side */
   div.hero-right-side{
-    width: 60%;
+    width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,6 +164,8 @@ button.ggl-btn, button.fb-btn{
     src: url("/fonts/otomanopee/fonts/ttf/OtomanopeeOne-Regular.ttf");
    }
   
+  
+
    div.hero-right-side h3{
     font-family: "otomanopee";
     text-shadow: 2px 2px 0 hsla(0, 0%, 49%, 1);
@@ -149,3 +179,142 @@ button.ggl-btn, button.fb-btn{
     font-size: 24px;
     text-shadow: 0.5px 0.5px 0 hsla(0, 0%, 49%, 1);
    }
+
+
+   /* MEDIA QUERIES  FOR MOBILE*/
+   @media (min-width:320px) and (max-width: 600px) {
+    div.hero-right-side{
+      display: none;
+    }
+  
+    div.page-wrapper::before{
+      background: none;
+    }
+   
+    div.hero-signup{
+      display: block;
+    }
+  
+  
+   div.hero-left-side{
+    width: 100%;
+    background: none;
+    margin-inline-start: 0.5rem;
+   }
+  
+   a .btn-home{
+    color: hsla(198, 100%, 25%, 1);
+      padding: 4px;
+      margin-block-start: 5px;
+      /* font-size: 28px; */
+    }
+
+    .hero-left-side h2{
+     color: hsla(198, 100%, 25%, 1);
+     margin-block-end: 1rem;
+     font-size: 16px;
+    }
+  
+    form.form-group input{
+      width: 17rem;
+      height: 1.87rem;
+      background-color: hsla(0, 0%, 100%, 1);
+      border: 1px solid hsla(0, 0%, 0%, 1);
+      border-radius: 12px;
+       padding: 2vw;
+      font-weight: 400;
+      /* margin-inline-start: 4rem; */
+    }
+    div.div-wrapper{
+    border: none;
+    }
+
+    div.div-wrapper button{
+      top: 10px;
+  }
+  
+    form.form-group div-wrapper input{
+      width: 17rem;
+      height: 1.87rem;
+      background-color: hsla(0, 0%, 100%, 1);
+      border: 1px solid hsla(0, 0%, 0%, 1);
+      border-radius: 12px;
+       padding: 2vw;
+      font-weight: 400;
+    }
+    /* div.input-wrapper button {
+      right: 10px;
+    } */
+  
+    form .reg-btn{
+      width: 17rem;
+      height: 2.5rem;
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+  
+    p.other{
+      color: hsla(198, 100%, 25%, 1); ;
+    }
+  
+    button.ggl-btn, button.fb-btn{
+      width: 17rem;
+      height: 1.87rem;
+      color: hsl(211, 76%, 36%)
+    }
+  
+    p.sign-in{
+      color: hsl(0, 0%, 0%);
+      font-size: 8px;
+      margin-inline-start: 1rem;
+    }
+  } 
+  
+
+  /* MEDIA QUERIES FOR TABLET */
+  @media (min-width: 601px) and (max-width:1024px) {
+    div.hero-right-side{
+      display: none;
+    }
+  
+    div.page-wrapper::before{
+      background: none;
+    }
+   
+    div.hero-signup{
+      display: block;
+    }
+  
+  
+   div.hero-left-side{
+    width: 100%;
+    background: none;
+    margin-inline-start: 2rem;
+   }
+  
+   a .btn-home{
+    color: hsla(198, 100%, 25%, 1);
+      padding: 4px;
+      margin-block-start: 2px;
+      /* font-size: 28px; */
+    }
+    .hero-left-side h2{
+     color: hsla(198, 100%, 25%, 1);
+     margin-block-end: 1rem;
+     font-size: 24px;
+    }  
+  
+    p.other{
+      color: hsla(198, 100%, 25%, 1); ;
+    }
+  
+  
+    p.sign-in{
+      color: hsl(0, 0%, 0%);
+      font-size: 12px;
+      justify-content: center;
+      justify-self: center;
+      /* margin-inline-start: 1rem; */
+    }
+  }
+  

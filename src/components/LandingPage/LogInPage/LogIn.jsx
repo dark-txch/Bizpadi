@@ -62,9 +62,8 @@ export default function LogIn(){
             <div className="loginContainer">
                 <Link to="/">
                       <FaHouse
+                      className="home-btn"
                       size={36}
-                      color="white"
-                      style={{ marginBlockStart: '5px', marginBlockEnd:"0",padding: '8px' }}
                       />
                 </Link>
                 <div className="mainItems">
@@ -100,14 +99,14 @@ export default function LogIn(){
                     Sign in with Google
                   </button>
                   <button className="facebook-btn">
-                    <img src="/assets/icons/icons8-facebook.svg" style={{width:"25px", height:"25px"}} alt="facebook icon" />
+                   <img src="/assets/icons/logos_facebook.svg" alt="facebook icon" />
                     Sign in with Facebook
                   </button>
                 </div>
-                <div className="forgot-password" style={{ display: 'flex', alignItems: 'center' }}>
-                   <p style={{ marginRight: '45px' }}>Forgot your password?</p>
-                   <p style={{ marginRight: '8px' }}>Don’t have an account?</p>
-                   <Link to="/signup" style={{ color: "hsla(225, 100%, 50%, 1)", textDecoration: 'none' }}>
+                <div className="forgot-password">
+                   <p>Forgot your password?</p>
+                   <p>Don’t have an account?</p>
+                   <Link to="/signup">
                    Sign up
                    </Link>
                 </div>

@@ -17,6 +17,8 @@
 	flex: 1;
 	align-self: center;
 	height: inherit;
+
+
 }
 
 .homepage-nav .logo img {
@@ -35,6 +37,7 @@
 	line-height: 100%;
 	letter-spacing: 0%;
 	
+
 }
 
 .homepage-nav .pricingContact a {
@@ -57,6 +60,9 @@
 	gap: 0.7rem;
 	color: white;
 	border-radius: 12px;
+
+
+	/* border: 4px solid blue; */
 }
 
 .homepage-nav .loginGetStarted img {
@@ -100,9 +106,48 @@
 	background-color: #012435;
 }
 
+
 /* -------------------------------------------------------------------------------------------- */
 /* MEDIA QUERY */
+/* ------------------------------TABLET-------------------------------------------------------------- */
+@media (min-width: 601px) and (max-width: 1024px){
+.homepage-nav {
+	padding: 0;
+	width: 100%;
+	justify-content: space-between;
+	
+
+
+
+
+	/* border: 3px solid red; */
+}
+
+.homepage-nav .logo {
+	flex: initial;
+
+
+	border: 3px solid green;
+
+}
+
+.homepage-nav .pricingContact {
+	gap: 0;
+	flex: initial;
+	border: 3px solid yellow;
+
+}
+
+.homepage-nav .loginGetStarted {
+	flex: initial;
+	border: 4px solid blue;
+
+}
+
+}
+
 /* -------------------------------------------------------------------------------------------- */
+/* ------------------------------MOBILE-------------------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 600px) {
 	.homepage-nav {
 		padding: 0 1.5rem 0 0;
