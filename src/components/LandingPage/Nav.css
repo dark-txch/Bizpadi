@@ -113,8 +113,7 @@
 @media (min-width: 601px) and (max-width: 1024px){
 .homepage-nav {
 	padding: 0;
-	width: 100%;
-	justify-content: space-between;
+	justify-content: start;
 	
 
 
