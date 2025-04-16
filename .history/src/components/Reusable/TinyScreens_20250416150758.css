@@ -1,0 +1,27 @@
+/* ----------------------------------------------------------------- */
+/* ---------------------------------------------MEDIA QUERY*/
+/* -------------------------TINY SCREENS-------------------- */
+.tinyScreens {
+	display: none;
+}
+
+@media (max-width: 319px) {
+	/* OTHER COMPONENTS HIDDEN */
+	.landingPageContainer,
+	.nav,
+	.midSection,
+	.footer {
+		display: none;
+	}
+	.tinyScreens {
+		display: flex;
+		justify-content: center;
+		gap: 0.3rem;
+		font-size: 2rem;
+		color: #065d76;
+	}
+}
+
+/* ----------------------------------------------------------------- */
+/* --------------------------THE END--------------------------- */
+/* ----------------------------------------------------------------- */

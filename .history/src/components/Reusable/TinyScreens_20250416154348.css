@@ -1,0 +1,33 @@
+/* ----------------------------------------------------------------- */
+/* ---------------------------------------------MEDIA QUERY*/
+/* -------------------------TINY SCREENS-------------------- */
+/* ------------------------------------------------------------ */
+
+@media (max-width: 319px) {
+	/* OTHER COMPONENTS HIDDEN */
+	.homepage-nav,
+	.midSection,
+	.footer,
+	.copyRight {
+		display: none;
+	}
+	/* ------------------------------------------------------------ */
+	.tinyScreens {
+		background: linear-gradient(246.72deg, #c4f3ff 34.96%, #ffffff 90.24%);
+
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		al
+		gap: 0.3rem;
+		font-size: 3rem;
+
+		/* background-color: red; */
+		border: 3px solid red;
+	}
+}
+
+/* ----------------------------------------------------------------- */
+/* --------------------------THE END--------------------------- */
+/* ----------------------------------------------------------------- */

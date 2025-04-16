@@ -1,0 +1,32 @@
+/* ----------------------------------------------------------------- */
+/* ---------------------------------------------MEDIA QUERY*/
+/* -------------------------TINY SCREENS-------------------- */
+@media (min-width: 320px) {
+	.tinyScreens {
+		display: none;
+	}
+}
+
+@media (max-width: 319px) {
+	/* OTHER COMPONENTS HIDDEN */
+	.landingPageContainer,
+	.nav,
+	.midSection,
+	.footer {
+		display: none;
+	}
+	.tinyScreens {
+		background: linear-gradient(246.72deg, #c4f3ff 34.96%, #ffffff 90.24%);
+
+		display: flex;
+		justify-content: center;
+		gap: 0.3rem;
+		font-size: 2rem;
+
+		border: 3px solid red;
+	}
+}
+
+/* ----------------------------------------------------------------- */
+/* --------------------------THE END--------------------------- */
+/* ----------------------------------------------------------------- */
