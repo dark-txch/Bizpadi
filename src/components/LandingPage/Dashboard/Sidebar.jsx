@@ -13,7 +13,7 @@ function Sidebar() {
     <div className="sidebar">
       <div className="holder">
         <img src="/assets/icons/search.ic.svg" alt="search icon" />
-        <input type="text" placeholder="search..." className="search-bar" />
+        <input type="text" placeholder="search" className="search-bar" />
         </div>
       <nav>
         <NavLink to="/dashboard" end>
@@ -32,7 +32,10 @@ function Sidebar() {
         <img src="/assets/icons/team.ic.svg" alt="team icon" />
         Team</NavLink>
       </nav>
-      <button onClick={handleLogout} className="logout-btn">Logout</button>
+      <button onClick={handleLogout} className="logout-btn">
+        <img src="/assets/icons/logout.icon.svg" alt="logout icon" />
+        Log Out
+      </button>
     </div>
   );
 }
