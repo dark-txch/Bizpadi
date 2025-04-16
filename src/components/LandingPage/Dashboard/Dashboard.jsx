@@ -1,6 +1,9 @@
 import Sidebar from "./Sidebar"
 import "./dashboardPage.css"
 import { useState } from "react"
+import MyBarChart from "./BarChart"
+import { Link } from "react-router-dom"
+
 
 export default function Dashboard(){
       
@@ -44,36 +47,45 @@ export default function Dashboard(){
             <main>
                 <div className="refresh">
                     <p>#STORE OVERVIEW</p>
-                    <p>Updated: {lastUpdated} </p>
+                    <p>Updated: <span>{lastUpdated}</span> </p>
                     <button onClick={handleRefresh}> 
                         <img src="/assets/icons/refresh.svg" alt="refresh icon" />
                     </button>
                 </div>
 
-                <section className="performanceOverview">
-                    <table>
-                        <tr>performance</tr>
-                        <tr>OVERVIEW</tr>
-                    </table>
+                <section className="performance">
+                    <h3>Performance Overview</h3>
+                    <MyBarChart/>
                 </section>
 
 
-                <section className="top-prdct">
-                    <h4>Top Product Sales</h4>
-                    <p>Laptop</p>
-                    <p>Phones</p>
-                    <p>Head Phone</p>
-                </section>
+                <div className="main-bottom">
+                    <section className="top-prdct">
+                        <h4>Top Product Sales</h4>
+                        <p>Laptop   N1200   250</p>
+                        <p>Phones   N1000   95 </p>
+                        <p>Head Phone    N100   80</p>
+                    </section>
+                    <section className="shortcut">
+                    <Link to="/dashboard/inventory">
+                        <button>
+                            + Add New Product to your Inventory
+                        </button>
+                    </Link>    
 
-                <section className="team-mm">
-                    <h4>Team Members</h4>
-                    <div>
-                        <p>Vivian Goodnes</p>
-                        <p>CEO</p>
-                    </div>
+                    <Link to="/dashboard/sales">
+                        <button>
+                            + Add New Sales Record
+                        </button>
+                    </Link>
 
-
-                </section>
+                    <Link to="/dashboard/clients">
+                        <button>
+                            + Add New Client
+                        </button>
+                    </Link>  
+                    </section>
+                </div>
             </main>
 
         </div>

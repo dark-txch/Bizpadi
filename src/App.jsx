@@ -46,7 +46,7 @@ function App() {
 				{/* Dashboard Route with Nested Routes */}
 				<Route path="/dashboard" element={<MainLayout />}>
 					<Route index element={<Dashboard />} />
-					<Route path="clients" element={<Client />} /> {/* Correct component name */}
+					<Route path="clients" element={<Client />} /> 
 					<Route path="inventory" element={<Inventory />} />
 					<Route path="sales" element={<TrackSales />} />
 					<Route path="team" element={<Team />} />
