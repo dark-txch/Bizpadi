@@ -10,7 +10,7 @@ import Footer from "./components/LandingPage/Footer";
 import SignUp from "./components/LandingPage/SignUp/SignUp";
 import Welcome from "./components/LandingPage/SignUp/welcome";
 import WelcomeSecond from "./components/LandingPage/SignUp/welcomeSecond";
-import MainLayout from "./components/LandingPage/Dashboard/Main Layout";
+import MainLayout from "./components/LandingPage/Dashboard/MainLayout";
 import Dashboard from "./components/LandingPage/Dashboard/Dashboard";
 import Inventory from "./components/LandingPage/Dashboard/Inventory";
 import Team from "./components/LandingPage/Dashboard/Team";
