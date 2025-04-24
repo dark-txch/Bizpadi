@@ -13,17 +13,17 @@
 	src: url("/fonts/Poppins/Poppins-SemiBold.ttf");
 }
 
-<<<<<<< HEAD
+
 /* .hero-dashboard{
  padding-left: 1.5rem;
  padding-right: 1rem;
 } */
-=======
+
 .hero-dashboard {
 	padding-left: 1.5rem;
 	padding-right: 1rem;
 }
->>>>>>> cb6f87d35e13d3883c72626c7ddeca483f5b6a69
+
 
 header {
 	display: flex;

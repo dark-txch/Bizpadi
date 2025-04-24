@@ -5,16 +5,13 @@ import "./Sidebar.css";
 function Sidebar() {
 	const navigate = useNavigate();
 
-<<<<<<< HEAD
+
   const handleLogout = () => {
     // localStorage.removeItem('user'); // Optional
     navigate('/');
   };
-=======
-	const handleLogout = () => {
-		navigate("/login");
-	};
->>>>>>> cb6f87d35e13d3883c72626c7ddeca483f5b6a69
+
+
 
 	return (
 		<div className="sidebar">
