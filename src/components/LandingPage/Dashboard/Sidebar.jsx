@@ -1,12 +1,13 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 
+
 function Sidebar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
     // localStorage.removeItem('user'); // Optional
-    navigate('/login');
+    navigate('/');
   };
 
   return (

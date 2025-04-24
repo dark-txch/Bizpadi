@@ -1,0 +1,23 @@
+    div.pagination-buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border-top: 1.5px solid hsla(193, 91%, 39%, 1);
+    margin-top: 1rem;
+    font-family: "Poppins1", sans-serif;
+}
+
+.pagination-buttons button{
+background: none;
+margin: 5px;
+font-family: "Poppins1",sans-serif;
+}
+
+.pagination-buttons span{
+ margin: 0 10px;
+ /* font-weight:bold; */
+ font-family: "Poppins2", sans-serif;
+}

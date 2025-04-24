@@ -1,0 +1,77 @@
+
+.add-btn{
+    width: auto;
+    background-color: hsla(193, 91%, 39%, 1);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 9px;
+    border: none;
+    color: hsla(0, 0%, 100%, 1);
+    font-family: "Poppins1";
+}
+
+form.client-form{
+    margin-top: 1rem;
+}
+
+.client-form section{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.client-form input,
+.client-form select{
+    margin-bottom: 1rem;
+    border: 1px solid hsla(0, 0%, 0%, 0.5);
+    border-radius: 8px;
+    width: 15rem;
+    height: 2.2rem;
+    padding: 0.5rem;
+    box-shadow: 1px 1px 2px 0px hsla(0, 0%, 0%, 0.25);
+    font-family: "MyCustomFont", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.client-form input:focus{
+    border-color: hsla(193, 91%, 39%, 1);
+}
+
+.client-form select{
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+.client-add,
+.client-cancel{
+    width: auto;
+    background-color: hsla(193, 91%, 39%, 1);
+    padding: 8px;
+    margin-bottom: 5px;
+    margin-right: 0.8rem;
+    border-radius: 9px;
+    border: none;
+    color: hsla(0, 0%, 100%, 1);
+    font-family: "Poppins1";
+}
+
+button.action{
+    margin-right: 1rem;
+}
+
+.status.none {
+    border-radius: 10px;
+    background-color: rgb(239, 235, 235);
+    color: hsl(0, 0%, 1%);
+  }
+  
+  .status.pending {
+    border-radius: 10px;
+    background-color: hsl(58, 100%, 84%);
+    color: hsla(55, 97%, 35%, 1);
+  }
+  
+  .status.complete {
+    border-radius: 10px;
+    background-color:hsla(113, 100%, 88%, 1);
+    color: hsla(113, 93%, 29%, 1);
+  }

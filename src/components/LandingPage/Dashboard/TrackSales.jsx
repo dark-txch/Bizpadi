@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useEffect } from "react"
 import "./TrackSales.css"
 
 
@@ -11,15 +12,38 @@ export default function TrackSales(){
    const [salePrice, setSalePrice] = useState("")
    const [salesRecords, setSalesRecords] = useState([])
 
+   const [currentPage, setCurrentPage] = useState(1)
+   const recordsPerPage = showForm ? 3 : 10
+
    const profit = 
            salePrice && costPrice ? 
           ( parseFloat(salePrice) - parseFloat(costPrice)) * parseInt(quantity)
            : ""
 
+    const getToday = () => {
+      const today = new Date()
+       return today.toISOString().split("T")[0]
+    }
 
-   function toggleForm(){
-    setShowForm(!showForm)
-   }
+    const formatDate = (isoDate) => {
+      if (!isoDate || !isoDate.includes("-")) return isoDate
+     const [year, month, day] = isoDate.split("-")
+     if (!year || !month || !day) return isoDate
+     return `${day}-${month}-${year.slice(2)}`
+    }           
+    useEffect(() => {
+      if (showForm) {
+        setDate(getToday())
+      }
+    }, [showForm])
+
+   function toggleForm() {
+     setShowForm(prev => {
+       const nextState = !prev
+       setCurrentPage(1) 
+       return nextState
+      })
+   } 
    
    function handleSubmit(e){
       e.preventDefault()
@@ -30,7 +54,7 @@ export default function TrackSales(){
       }
 
       const newRecord = {
-        date,
+        date:  new Date(date).toISOString().split("T")[0],
         product,
         quantity,
         costPrice: parseFloat(costPrice),
@@ -38,9 +62,11 @@ export default function TrackSales(){
         profit: (parseFloat(salePrice) - parseFloat(costPrice)) * parseInt(quantity),
       }
 
-      setSalesRecords([...salesRecords, newRecord])
+      setSalesRecords([newRecord, ...salesRecords])
+      setCurrentPage(1)
 
-      setDate("");
+
+      setDate(getToday());
       setProduct("");
       setQuantity("");
       setCostPrice("");
@@ -62,16 +88,24 @@ export default function TrackSales(){
       setQuantity("");
       setCostPrice("");
       setSalePrice("")
-
       setShowForm(false)
+      setCurrentPage(1)
+
   }
+
+   const indexOfLastRecord = currentPage * recordsPerPage;
+   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+   const currentRecords = salesRecords.slice(indexOfFirstRecord, indexOfLastRecord);
+   const totalPages = Math.ceil(salesRecords.length / recordsPerPage)
+   
+
 
     return(
         <div> 
         <header className="track-sales">
             <h2>Track Sales</h2>
             <button className="track-btn" onClick={toggleForm} >
-              {showForm ? "Close" : "Add new item"}
+              {showForm ? "Close" : "Add new record"}
             </button>
         </header>
 
@@ -150,9 +184,9 @@ export default function TrackSales(){
                         </tr>
                         </thead>
                         <tbody>
-                            {salesRecords.map((record, index)=>(
+                            {currentRecords.map((record, index)=>(
                                 <tr key={index}>
-                                  <td>{record.date}</td>
+                                  <td>{formatDate(record.date)}</td>
                                   <td>{record.product}</td>
                                   <td>{record.quantity}</td>
                                   <td>₦{record.costPrice.toLocaleString()}</td>
@@ -166,6 +200,40 @@ export default function TrackSales(){
                             )}
                         </tbody>
                     </table>
+
+
+                   {totalPages > 1 && (
+                     <div className="pagination-buttons">
+                        <button
+                          onClick={() => setCurrentPage(1)}
+                          disabled={currentPage === 1}>
+                          First
+                        </button>
+
+                        <button
+                          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                          disabled={currentPage === 1}>
+                           Prev
+                        </button>
+
+                        <span>
+                          Page {currentPage} of {totalPages}
+                        </span>
+
+                        <button
+                         onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                         disabled={currentPage === totalPages}>
+                          Next
+                        </button>
+
+                        <button
+                          onClick={() => setCurrentPage(totalPages)}
+                          disabled={currentPage === totalPages}>
+                        Last
+                       </button>
+                     </div>
+                  )}
+
                 </div>
             )}
         </main>
