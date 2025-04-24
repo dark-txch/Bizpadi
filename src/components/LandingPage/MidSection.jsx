@@ -15,7 +15,7 @@ export default function MidSection() {
 				</div>
 			</section>
 
-			{/* This is the images section in the mid section */}
+			{/* THIS IS THE IMAGES SECTION IN THE MID SECTION */}
 			<section className="sectionImagesParent">
 				<div className="ImageChildrenWrapper">
 					<img src="/assets/images/smiley.png" alt="smiley" />
