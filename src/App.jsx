@@ -4,6 +4,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 // Upper imports are very important
 import Nav from "./components/LandingPage/Nav";
 import PricingPage from "./components/LandingPage/PricingPage/Pricing";
+import Contact from "./components/LandingPage/Contact"
 import LogInPage from "./components/LandingPage/LogInPage/LogIn";
 import MidSection from "./components/LandingPage/MidSection";
 import Footer from "./components/LandingPage/Footer";
@@ -40,6 +41,7 @@ function App() {
 			{/* This sets the base path for all routes */}
 			<Routes>
 				<Route path="/" element={<LandingPage />} />
+				<Route path="/contact" element={<Contact/>}/>
 				<Route path="/pricing" element={<PricingPage />} />
 				<Route path="/login" element={<LogInPage />} />
 				<Route path="/signUp" element={<SignUp />} />

@@ -191,6 +191,7 @@ div.vector3{
 
 section.bottom3{
   display: flex;
+  flex-wrap: wrap;
   gap:3.5rem ;
   margin-inline-start: 6.125rem;
   margin-block-start: 15rem;
@@ -200,11 +201,20 @@ div.contact-us3,
 div.log-out3{
   display: flex;
   gap: 1rem;
+  align-items: center;
   font-family: "MyCustomFont", sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: hsla(0, 0%, 100%, 1);
 }
+
+.contact-us3 img,
+.log-out3 img {
+  width: 20px; 
+  height: 20px;
+  object-fit: contain;
+}
+
 
 
 /* MEDIA QUERIES FOR MOBILE*/

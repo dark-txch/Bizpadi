@@ -206,12 +206,21 @@ div.vector{
   div.contact-us,
   div.log-out{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
     font-family: "MyCustomFont", sans-serif;
     font-weight: 500;
     font-size: 14px;
     color: hsla(0, 0%, 100%, 1);
   }
+
+  .contact-us img,
+  .log-out img {
+  width: 20px; 
+  height: 20px;
+  object-fit: contain;
+}
 
 
   /* MEDIA QUERIES FOR MOBILE */

@@ -29,7 +29,7 @@ export default function LogIn(){
         }
     
         try {
-          const response = await fetch("https://your-backend.com/api/login", {
+          const response = await fetch("https://bizpadi-backend.onrender.com/api/v1/login", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

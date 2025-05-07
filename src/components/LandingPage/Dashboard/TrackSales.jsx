@@ -193,7 +193,9 @@ export default function TrackSales(){
                                   <td>₦{record.salePrice.toLocaleString()}</td>
                                   <td>₦{record.profit.toLocaleString()}</td>
                                   <td>
-                                  <button onClick={() => handleDelete(index)}>Delete</button>
+                                  <button onClick={() => handleDelete(index)}>
+                                    <img src="/assets/icons/delete.icon.svg" alt="delete icon" />
+                                  </button>
                                   </td>
                               </tr>
                             )

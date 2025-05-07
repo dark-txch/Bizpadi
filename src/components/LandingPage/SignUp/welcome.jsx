@@ -1,82 +1,101 @@
-import { Link } from "react-router-dom"
-import "./welcome.css"
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import "./welcome.css";
+
+export default function Welcome() {
+  const navigate = useNavigate();
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    location: "",
+    phone: "",
+    info: ""
+  });
 
 
-export default function Welcome(){
-    return(
-        <div className="wlcm-container">
-            <div className="leftside-white">
-                <h2>Bizpadi</h2>
-                <h3>Welcome!</h3>
-                <p>Let's set up your profile</p>
-                
-                <form className="form2">
-                    <div className="flexbox">
-                        <div className="personal-info">
-                            <label htmlFor="firstName">
-                                First Name
-                                <input
-                                   className="name-btn"
-                                   type="text"
-                                   id="firstName"
-                                //    value={}
-                                required
-                                   />
-                            </label>
-                            <label htmlFor="lastName">
-                                Last Name
-                                <input
-                                   className="name-btn"
-                                   type="text"
-                                   id="lastName"
-                                //    value={}
-                                required
-                                   />
-                            </label>
-                        </div>
-                        <label htmlFor="location">
-                            Where are you located?
-                            <input
-                               type="text"
-                               id="location"
-                            //    value={}
-                            required
-                               />
-                        </label>
-                        <label htmlFor="phone">
-                            Phone Number
-                            <input
-                               type="tel"
-                               id="phone"
-                            //    value={}
-                            required
-                               />
-                        </label>
-                        <label htmlFor="info">
-                            How did you hear about us?
-                            {/* <select value={selectedOption} onChange={handleChange}> */}
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.id]: e.target.value });
+  };
 
-                            {/* remember to move the dropdown select icon */}
-                            <select id="info">
-                               <option  disabled selected value="">
-                                Please choose an option
-                                </option>
-                               <option value="social_media">Social Media</option>
-                               <option value="friend">Friend or Family</option>
-                               <option value="google">Google Search</option>
-                               <option value="advertisement">Advertisement</option>
-                               <option value="other">Other</option>
-                            </select>
-                        </label>
+  const handleNext = () => {
+    localStorage.setItem("signup_step2", JSON.stringify({
+        phone_number: form.phone
+      }));
+    navigate("/welcomeSecond");
+  };
 
-                        <div className="btns">
-                            <Link className="btn back-btn" to="/signup">Back</Link>
-                            <Link className="btn next-btn" to="/welcomeSecond">Next</Link>
-                        </div>
-                    </div>
-                </form>
+  return (
+    <div className="wlcm-container">
+      <div className="leftside-white">
+        <h2>Bizpadi</h2>
+        <h3>Welcome!</h3>
+        <p>Let's set up your profile</p>
 
+        <form className="form2">
+          <div className="flexbox">
+            <div className="personal-info">
+              <label htmlFor="firstName">
+                First Name
+                <input
+                  className="name-btn"
+                  type="text"
+                  id="firstName"
+                  value={form.firstName}
+                  onChange={handleChange}
+                  required
+                />
+              </label>
+              <label htmlFor="lastName">
+                Last Name
+                <input
+                  className="name-btn"
+                  type="text"
+                  id="lastName"
+                  value={form.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </label>
             </div>
+            <label htmlFor="location">
+              Where are you located?
+              <input
+                type="text"
+                id="location"
+                value={form.location}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label htmlFor="phone">
+              Phone Number
+              <input
+                type="tel"
+                id="phone"
+                value={form.phone}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label htmlFor="info">
+              How did you hear about us?
+              <select id="info" value={form.info} onChange={handleChange}>
+                <option disabled value="">Please choose an option</option>
+                <option value="social_media">Social Media</option>
+                <option value="friend">Friend or Family</option>
+                <option value="google">Google Search</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+
+            <div className="btns">
+              <Link className="btn back-btn" to="/signup">Back</Link>
+              <button type="button" className="btn next-btn" onClick={handleNext}>Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
 
             <div className="rightside-blue">
                 <div className="vector">

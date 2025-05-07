@@ -13,7 +13,7 @@ export default function Nav() {
 				{/* PRICING AND CONTACT US CONTAINER */}
 				<div className="pricingContact">
 					<Link to="/pricing">Pricing</Link>
-					<a href="#">Contact Us</a>
+					<Link to="/contact">Contact Us</Link>
 				</div>
 
 				{/* LOGIN AND GET STARTED CONTAINER*/}

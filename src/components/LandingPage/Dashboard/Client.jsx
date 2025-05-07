@@ -3,8 +3,6 @@ import "./Client.css"
 import Pagination from "../../Reusable/Pagination"
 
 
-
-
 export default function Client(){
     const [add, setAdd] = useState(false)
 
@@ -40,7 +38,10 @@ export default function Client(){
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if (!formData.name || !formData.email || !formData.phone) return
+        if (!formData.name || !formData.email || !formData.phone) {
+            alert("Please fill in all fields before submitting.");
+           return
+        } 
 
         setClients((prevClients) => [formData, ...prevClients])
 
@@ -59,6 +60,9 @@ export default function Client(){
     }
 
     const handleEdit = (index) => {
+      if(!add) {
+        setAdd(true)
+      }
         const client = clients[index];
         setFormData(client);
     
@@ -147,10 +151,10 @@ export default function Client(){
                           <td> <div className={`status ${client.status}`}>{client.status}</div></td>
                           <td>
                             <button className="action" onClick={() => handleEdit(indexOfFirst + i)}>
-                              Edit
+                              <img src="/assets/icons/edit.icon.svg" alt="edit icon" />
                             </button>
-                            <button  className="action" onClick={() => handleDelete(indexOfFirst + i)}>
-                              Delete
+                            <button  className="action delete" onClick={() => handleDelete(indexOfFirst + i)}>
+                            <img src="/assets/icons/delete.icon.svg" alt="delete icon" />
                             </button>
                           </td>
                         </tr>

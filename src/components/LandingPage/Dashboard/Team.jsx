@@ -37,7 +37,10 @@ export default function Teams() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.position || !formData.staffId || !formData.department) return;
+    if (!formData.name || !formData.position || !formData.staffId || !formData.department) {
+      alert("Please fill in all fields before submitting.");
+      return;
+    }
 
     setTeams((prevTeams) => [formData, ...prevTeams]);
 
@@ -50,6 +53,9 @@ export default function Teams() {
   };
 
   const handleEdit = (index) => {
+    if(!add) {
+      setAdd(true)
+    }
     const member = teams[index];
     setFormData(member);
     const updatedTeams = teams.filter((_, i) => i !== index);
@@ -112,7 +118,7 @@ export default function Teams() {
       <main>
         {teams.length > 0 && (
           <>
-            <table className="client-table">
+           <table className="client-table">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -131,10 +137,10 @@ export default function Teams() {
                     <td>{member.department}</td>
                     <td>
                       <button className="action" onClick={() => handleEdit(indexOfFirst + i)}>
-                        Edit
+                      <img src="/assets/icons/edit.icon.svg" alt="edit icon" />
                       </button>
                       <button className="action" onClick={() => handleDelete(indexOfFirst + i)}>
-                        Delete
+                      <img src="/assets/icons/delete.icon.svg" alt="delete icon" />
                       </button>
                     </td>
                   </tr>
@@ -148,6 +154,7 @@ export default function Teams() {
                 totalPages={totalPages}
                 onPageChange={setCurrentPage}
               />
+
             )}
           </>
         )}

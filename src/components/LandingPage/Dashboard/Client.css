@@ -56,6 +56,7 @@ form.client-form{
 
 button.action{
     margin-right: 1rem;
+    align-items: center;
 }
 
 .status.none {
@@ -75,3 +76,5 @@ button.action{
     background-color:hsla(113, 100%, 88%, 1);
     color: hsla(113, 93%, 29%, 1);
   }
+
+  
