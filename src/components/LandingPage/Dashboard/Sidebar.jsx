@@ -6,12 +6,39 @@ function Sidebar() {
 	const navigate = useNavigate();
 
 
-  const handleLogout = () => {
-    // localStorage.removeItem('user'); // Optional
-    navigate('/');
-  };
-
-
+	const handleLogout = async () => {
+		try {
+			const token = localStorage.getItem("token");
+	
+			if (!token) {
+				navigate("/");
+				return;
+			}
+	
+			const response = await fetch("https://bizpadi-backend.onrender.com/api/v1/auth/logout", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"Authorization": `Bearer ${token}`, // Send the token in the Authorization header
+				},
+			});
+	
+			const data = await response.json();
+	
+			if (response.ok) {
+				// Clear tokens from localStorage
+				localStorage.removeItem("token");
+				localStorage.removeItem("refreshToken");
+				navigate("/"); // Redirect to the landing page
+			} else {
+				alert(data.message || "Logout failed.");
+			}
+		} catch (err) {
+			alert("Something went wrong during logout.");
+			console.error("Error:", err);
+		}
+	};
+	
 
 	return (
 		<div className="sidebar">

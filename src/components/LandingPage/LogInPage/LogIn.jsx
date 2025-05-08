@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./login.css"
 import { FaHouse } from "react-icons/fa6"
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
@@ -12,8 +12,10 @@ export default function LogIn(){
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState("")
     const [message, setMessage] = useState("")
+    const navigate = useNavigate()
 
-    const togglePasswordVisibility = () => {
+    const togglePasswordVisibility = (e) => {
+        e.preventDefault
         setShowPassword(!showPassword)
       }
     
@@ -29,7 +31,7 @@ export default function LogIn(){
         }
     
         try {
-          const response = await fetch("https://bizpadi-backend.onrender.com/api/v1/login", {
+          const response = await fetch("https://bizpadi-backend.onrender.com/api/v1/auth/login", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -43,15 +45,16 @@ export default function LogIn(){
           const data = await response.json()
     
           if (response.ok) {
-            setMessage("Login successful!")
-            localStorage.setItem("token", data.token); 
-            // Optional: redirect the user
+            localStorage.setItem("token", data.existingUserData.accessToken);
+            localStorage.setItem("refreshToken", data.existingUserData.refreshToken);
+            navigate("/dashboard");
+            console.log(JSON.parse(localStorage.getItem("signup_step1") || "{}"))
           } else {
-            setError(data.message || "Login failed.");
+            alert (data.message || "Login failed.");
           }
         } catch (err) {
-          setError("Something went wrong. Please try again.")
-          console.error(err)
+          alert("Something went wrong. Please try again.")
+          console.error('Error:', err )
         }
       }
     
@@ -87,7 +90,7 @@ export default function LogIn(){
                        onChange={(e) => setPassword(e.target.value)}
                        required
                      />
-                   <button className="password-icon" onClick={togglePasswordVisibility}>
+                   <button type="button" className="password-icon" onClick={togglePasswordVisibility}>
                            {showPassword ? <FaEyeSlash /> : <FaEye />}
                     </button>
                   </div>

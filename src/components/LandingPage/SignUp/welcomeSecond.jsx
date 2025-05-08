@@ -43,7 +43,6 @@ export default function WelcomeSecond() {
       ...step3
     };
     
-   console.log(allData)
 
     try {
       const response = await fetch("https://bizpadi-backend.onrender.com/api/v1/auth/register", {
@@ -53,8 +52,6 @@ export default function WelcomeSecond() {
       });
 
       if (response.ok) {
-        alert("Signup completed successfully");
-        localStorage.clear();
         navigate("/dashboard");
       } else {
         const error = await response.json();

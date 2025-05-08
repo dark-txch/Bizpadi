@@ -28,6 +28,11 @@ export default function Dashboard(){
     // Add any actual refresh logic here (like fetching new data)
     setLastUpdated(getCurrentTime());
   }
+
+  const signupData = JSON.parse(localStorage.getItem("signup_step1"));
+  console.log(signupData)
+   const firstName = signupData?.first_name || "User"; // Default to "User" if not found
+
  
     return(
         <div className="hero-dashboard">
@@ -40,7 +45,7 @@ export default function Dashboard(){
                     </div>
 
                     <div className="profile">
-                        <p>Welcome, Vivian</p>
+                        <p>Welcome, {firstName}</p>
                     </div>
                 </div>
             </header>

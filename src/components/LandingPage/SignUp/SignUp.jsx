@@ -27,6 +27,8 @@ export default function SignUp() {
       password: form.password,
       confirm_password: form.password
     }));
+
+    console.log("Saved data:", localStorage.getItem("signup_step1"))
     navigate("/welcome"); // go to welcome page
   };
   
