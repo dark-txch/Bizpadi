@@ -1,64 +1,64 @@
-import "./components/LandingPage/LandingPage.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	useLocation,
+} from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
-// Upper imports are very important
-import Nav from "./components/LandingPage/Nav";
+
+// Landing Page Components
+import LandingPage from "./components/LandingPage/LandingPage";
 import PricingPage from "./components/LandingPage/PricingPage/Pricing";
-import Contact from "./components/LandingPage/Contact"
+import Contact from "./components/LandingPage/Contact";
 import LogInPage from "./components/LandingPage/LogInPage/LogIn";
-import MidSection from "./components/LandingPage/MidSection";
-import Footer from "./components/LandingPage/Footer";
 import SignUp from "./components/LandingPage/SignUp/SignUp";
 import Welcome from "./components/LandingPage/SignUp/welcome";
 import WelcomeSecond from "./components/LandingPage/SignUp/welcomeSecond";
+
+// Dashboard Components
 import MainLayout from "./components/LandingPage/Dashboard/MainLayout";
 import Dashboard from "./components/LandingPage/Dashboard/Dashboard";
 import Inventory from "./components/LandingPage/Dashboard/Inventory";
 import Team from "./components/LandingPage/Dashboard/Team";
 import Client from "./components/LandingPage/Dashboard/Client";
 import TrackSales from "./components/LandingPage/Dashboard/TrackSales";
-import CopyRight from "./components/Reusable/CopyRight";
-// FOR SCREENS BELOW 320PX
-import TinyScreens from "./components/Reusable/TinyScreens";
 
-function LandingPage() {
-	return (
-		<>
-			<div className="landingPageContainer">
-				<Nav />
-				<MidSection />
-				<Footer />
-				<CopyRight />
-				<TinyScreens />
-			</div>
-		</>
-	);
-}
+// Extract routes into a separate component so AnimatePresence can work
+function AnimatedRoutes() {
+	const location = useLocation();
 
-function App() {
 	return (
-		<Router>
-			{/* This sets the base path for all routes */}
-			<Routes>
+		<AnimatePresence mode="wait">
+			{/* AnimatePresence needs to wrap the Route content, not Routes */}
+			<Routes location={location} key={location.pathname}>
 				<Route path="/" element={<LandingPage />} />
-				<Route path="/contact" element={<Contact/>}/>
+				<Route path="/contact" element={<Contact />} />
 				<Route path="/pricing" element={<PricingPage />} />
 				<Route path="/login" element={<LogInPage />} />
 				<Route path="/signUp" element={<SignUp />} />
 				<Route path="/welcome" element={<Welcome />} />
 				<Route path="/welcomeSecond" element={<WelcomeSecond />} />
-
-				{/* Dashboard Route with Nested Routes */}
 				<Route path="/dashboard" element={<MainLayout />}>
 					<Route index element={<Dashboard />} />
-					<Route path="clients" element={<Client />} /> 
+					<Route path="clients" element={<Client />} />
 					<Route path="inventory" element={<Inventory />} />
 					<Route path="sales" element={<TrackSales />} />
 					<Route path="team" element={<Team />} />
 				</Route>
 			</Routes>
-		</Router>
+		</AnimatePresence>
 	);
 }
 
+// Main App
+function App() {
+	return (
+		<Router>
+			<ErrorBoundary>
+				<AnimatedRoutes />
+			</ErrorBoundary>
+		</Router>
+	);
+}
 export default App;

@@ -1,3 +1,0 @@
-import "./TinyScreens.css";
-
-r

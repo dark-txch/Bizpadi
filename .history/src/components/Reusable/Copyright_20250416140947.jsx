@@ -1,4 +1,0 @@
-import "./CopyRight.css";
-
-
-red
