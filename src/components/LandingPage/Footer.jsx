@@ -1,12 +1,48 @@
+import { useEffect, useState, useRef } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import "./Footer.css";
 
 export default function Footer() {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 600);
+		};
+		handleResize();
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
+	const Feature = ({ children }) => {
+		const ref = useRef(null);
+		const inView = useInView(ref, {
+			once: false,
+			amount: 0.3,
+		});
+
+		return (
+			<AnimatePresence>
+				{isMobile && (
+					<motion.div
+						ref={ref}
+						initial={{ opacity: 0, y: 50 }}
+						animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+						transition={{ duration: 0.5, ease: "easeOut" }}
+						className="singleFeatureContainer"
+					>
+						{children}
+					</motion.div>
+				)}
+				{!isMobile && <div className="singleFeatureContainer">{children}</div>}
+			</AnimatePresence>
+		);
+	};
+
 	return (
 		<div className="footer">
-			{/* The section container is the parent to the features */}
 			<section className="footerFeaturesParent">
-				{/* 1ST CONTAINER */}
-				<div className="singleFeatureContainer ">
+				<Feature>
 					<div className="featureImageContainer">
 						<img src="/assets/images/client-1.png" alt="client-1" />
 					</div>
@@ -14,10 +50,9 @@ export default function Footer() {
 						<h1>Items</h1>
 						<p>Keep track of the items in your stock, stay ahead.</p>
 					</div>
-				</div>
+				</Feature>
 
-				{/* 2ND CONTAINER */}
-				<div className="singleFeatureContainer ">
+				<Feature>
 					<div className="featureImageContainer">
 						<img src="/assets/images/client-2.png" alt="client-2" />
 					</div>
@@ -28,10 +63,9 @@ export default function Footer() {
 							result.
 						</p>
 					</div>
-				</div>
+				</Feature>
 
-				{/* 3RD CONTAINER */}
-				<div className="singleFeatureContainer ">
+				<Feature>
 					<div className="featureImageContainer">
 						<img src="/assets/images/track-profit.png" alt="track-profit" />
 					</div>
@@ -42,18 +76,17 @@ export default function Footer() {
 							profit.
 						</p>
 					</div>
-				</div>
+				</Feature>
 
-				{/* 4TH CONTAINER */}
-				<div className="singleFeatureContainer">
+				<Feature>
 					<div className="featureImageContainer">
 						<img src="/assets/images/track-sales.png" alt="track-sales" />
 					</div>
-					<div className=" trackSales">
+					<div className="trackSales">
 						<h1>Track Sales</h1>
 						<p>Track how much sales you have made.</p>
 					</div>
-				</div>
+				</Feature>
 			</section>
 		</div>
 	);
