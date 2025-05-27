@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import "./Footer.css";
 
