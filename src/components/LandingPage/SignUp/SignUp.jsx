@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./signUp.css";
-import { FaHome } from "react-icons/fa";
+import HomeButton from "../../Reusable/HomeButton";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
@@ -49,9 +49,7 @@ export default function SignUp() {
 				<div className="page-wrapper">
 					<div className="hero-signup">
 						<div className="hero-left-side">
-							<Link to="/">
-								<FaHome className="home-btn" size={40} />
-							</Link>
+							<HomeButton />
 							<h2>Sign up</h2>
 							<form className="form-group" onSubmit={handleSubmit}>
 								<input

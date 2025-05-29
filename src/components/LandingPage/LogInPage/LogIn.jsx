@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
-import { FaHome } from "react-icons/fa";
+import HomeButton from "../../Reusable/HomeButton";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
@@ -74,9 +74,7 @@ export default function LogIn() {
 			>
 				<div className="hero-container">
 					<div className="loginContainer">
-						<Link to="/">
-							<FaHome className="home-btn" size={40} />
-						</Link>
+						<HomeButton />
 						<div className="mainItems">
 							<img
 								src="assets/icons/logo.svg"

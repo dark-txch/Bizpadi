@@ -167,7 +167,7 @@
 		color: #00517a;
 		background-color: transparent;
 		position: fixed;
-		top: 0;
+		top: 4rem;
 		right: 0.5rem;
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
@@ -182,7 +182,7 @@
 
 	.mobileMenuLinks {
 		position: fixed;
-		top: 4rem;
+		top: 8rem;
 		right: 0.5rem;
 		display: flex;
 		flex-direction: column;
