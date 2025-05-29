@@ -7,6 +7,7 @@ div.page-wrapper {
 	position: relative;
 	overflow: hidden;
 	min-height: 100vh;
+	min-height: 100dvh;
 	font-family: "MyCustomFont", sans-serif;
 	font-weight: normal;
 	font-style: normal;
@@ -29,6 +30,7 @@ div.hero-container {
 	position: relative;
 	z-index: 1;
 	height: 100vh;
+	height: 100dvh;
 	display: flex;
 }
 
@@ -48,7 +50,7 @@ div.loginContainer {
 
 .home-btn {
 	position: fixed;
-	top: 5rem;
+	top: 2rem;
 	left: 0;
 	color: #00517a;
 	background: #ffffff;
@@ -136,9 +138,11 @@ button.login {
 }
 /* login with google or facebook btns */
 p.first {
+	font-family: "MyCustomFont", sans-serif;
+	margin-bottom: 9px;
 	font-weight: 600;
-	font-size: 16px;
-	margin-bottom: 5px;
+	font-size: 18px;
+	text-align: center;
 }
 
 button.google-btn,

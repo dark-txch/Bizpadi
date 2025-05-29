@@ -12,12 +12,17 @@ div.hero-signup {
 	position: relative;
 	z-index: 1;
 	height: 100vh;
+	height: 100dvh;
 	display: flex;
 }
 
 /* left side container */
 div.hero-left-side {
-	background: linear-gradient(180deg, #666666 0%, #000000 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(180deg, #66666670 0%, #000000 100%);
 	color: hsla(0, 0%, 100%, 1);
 	width: 45%;
 	height: 100%;
@@ -25,10 +30,18 @@ div.hero-left-side {
 	border-bottom-right-radius: 8px;
 }
 
-a .btn-home {
-	color: hsl(0, 0%, 100%);
-	padding: 4px;
-	margin-block-start: 5px;
+.home-btn {
+	position: fixed;
+	top: 2rem;
+	left: 0;
+	color: #00517a;
+	background: #ffffff;
+	border: 1px solid #ccc;
+	padding: 0.5rem 0;
+	width: 4rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
 }
 
 div.hero-left-side h2 {
@@ -57,6 +70,16 @@ form.form-group input {
 	padding: 15px;
 	font-weight: 400;
 	margin-bottom: 12px;
+	font-size: 1.1rem;
+}
+
+form.form-group input::placeholder {
+	color: rgb(156, 156, 156) !important;
+	-webkit-text-fill-color: rgb(
+		156,
+		156,
+		156
+	) !important; /* For Safari/Chrome */
 }
 
 .div-wrapper input {
@@ -79,34 +102,30 @@ div.div-wrapper {
 	position: relative;
 }
 div.div-wrapper button {
-	background: none;
 	position: absolute;
 	right: 0;
 	top: 0;
 	transform: translate(-1rem, 0.8rem);
-	color: rgb(158, 158, 158);
+	color: rgb(171, 171, 171);
 	font-size: 1.2rem;
 	cursor: pointer;
+	background: none;
 }
 
 form .reg-btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	width: 24.25rem;
 	height: 2.87rem;
-	background-color: hsla(200, 100%, 24%, 1);
+	background-color: rgba(0, 81, 122, 0.596);
 	border: none;
 	border-radius: 12px;
-	padding: 15px;
+	padding: 16px, 24px;
 	font-weight: 400;
-	text-align: center;
-	margin-bottom: 14px;
-	margin-top: 10px;
-	font-family: "MyCustomFont", sans-serif;
-	font-weight: 700;
-	font-size: 18px;
+	margin-top: 15px;
+	margin-bottom: 10px;
 	color: hsla(0, 0%, 100%, 1);
+	font-size: 1.1rem;
+	font-weight: 600;
+	cursor: pointer;
 }
 p.other {
 	font-family: "MyCustomFont", sans-serif;
@@ -130,10 +149,12 @@ button.fb-btn {
 	border-radius: 12px;
 	padding-inline-start: 15px;
 	display: flex;
-	align-items: center;
 	gap: 80px;
-	color: hsla(0, 0%, 49%, 1);
+	align-items: center;
+	background-color: rgb(255, 255, 255);
+	color: rgb(156, 156, 156);
 	font-weight: 600;
+	font-size: 1.1rem;
 	margin-block-end: 12px;
 }
 
@@ -148,12 +169,6 @@ p > a {
 	font-weight: 700;
 }
 
-/* p > span{
-    color: hsla(225, 100%, 50%, 1);
-    font-weight: 700;
-  } */
-
-/* hero right side */
 div.hero-right-side {
 	width: 55%;
 	display: flex;
@@ -189,8 +204,11 @@ div.hero-right-side p {
 		display: none;
 	}
 
-	div.page-wrapper::before {
-		background: none;
+	div.page-wrapper {
+		background: linear-gradient(180deg, #66666670 0%, #000000 100%),
+			url("/assets/images/loginbckg.svg");
+		background-size: cover;
+		background-position: center;
 	}
 
 	div.hero-signup {
@@ -200,38 +218,24 @@ div.hero-right-side p {
 	div.hero-left-side {
 		width: 100%;
 		background: none;
-		margin-inline-start: 0.5rem;
 	}
 
 	a .btn-home {
 		color: hsla(198, 100%, 25%, 1);
 		padding: 4px;
 		margin-block-start: 5px;
-		/* font-size: 28px; */
 	}
 
 	.hero-left-side h2 {
-		color: hsla(198, 100%, 25%, 1);
-		margin-block-end: 1rem;
-		font-size: 16px;
+		font-size: 20px;
+		text-align: center;
 	}
 
 	form.form-group input {
-		width: 17rem;
-		height: 1.87rem;
-		background-color: hsla(0, 0%, 100%, 1);
-		border: 1px solid hsla(0, 0%, 0%, 1);
-		border-radius: 12px;
-		padding: 2vw;
-		font-weight: 400;
-		/* margin-inline-start: 4rem; */
+		width: 20rem;
 	}
 	div.div-wrapper {
 		border: none;
-	}
-
-	div.div-wrapper button {
-		top: 10px;
 	}
 
 	form.form-group div-wrapper input {
@@ -243,32 +247,19 @@ div.hero-right-side p {
 		padding: 2vw;
 		font-weight: 400;
 	}
-	/* div.input-wrapper button {
-      right: 10px;
-    } */
 
 	form .reg-btn {
-		width: 17rem;
-		height: 2.5rem;
-		margin-top: 1rem;
-		font-size: 14px;
-	}
-
-	p.other {
-		color: hsla(198, 100%, 25%, 1);
+		width: 20rem;
 	}
 
 	button.ggl-btn,
 	button.fb-btn {
-		width: 17rem;
-		height: 1.87rem;
-		color: hsl(211, 76%, 36%);
+		width: 20rem;
+		gap: 50px;
 	}
 
 	p.sign-in {
-		color: hsl(0, 0%, 0%);
-		font-size: 8px;
-		margin-inline-start: 1rem;
+		width: 20rem;
 	}
 }
 
@@ -278,8 +269,11 @@ div.hero-right-side p {
 		display: none;
 	}
 
-	div.page-wrapper::before {
-		background: none;
+	div.page-wrapper {
+		background: linear-gradient(180deg, #66666670 0%, #000000 100%),
+			url("/assets/images/loginbckg.svg");
+		background-size: cover;
+		background-position: center;
 	}
 
 	div.hero-signup {
@@ -289,30 +283,47 @@ div.hero-right-side p {
 	div.hero-left-side {
 		width: 100%;
 		background: none;
-		margin-inline-start: 2rem;
 	}
 
 	a .btn-home {
 		color: hsla(198, 100%, 25%, 1);
 		padding: 4px;
-		margin-block-start: 2px;
-		/* font-size: 28px; */
-	}
-	.hero-left-side h2 {
-		color: hsla(198, 100%, 25%, 1);
-		margin-block-end: 1rem;
-		font-size: 24px;
+		margin-block-start: 5px;
 	}
 
-	p.other {
-		color: hsla(198, 100%, 25%, 1);
+	.hero-left-side h2 {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	form.form-group input {
+		width: 25rem;
+	}
+	div.div-wrapper {
+		border: none;
+	}
+
+	form.form-group div-wrapper input {
+		width: 17rem;
+		height: 1.87rem;
+		background-color: hsla(0, 0%, 100%, 1);
+		border: 1px solid hsla(0, 0%, 0%, 1);
+		border-radius: 12px;
+		padding: 2vw;
+		font-weight: 400;
+	}
+
+	form .reg-btn {
+		width: 25rem;
+	}
+
+	button.ggl-btn,
+	button.fb-btn {
+		width: 25rem;
+		gap: 100px;
 	}
 
 	p.sign-in {
-		color: hsl(0, 0%, 0%);
-		font-size: 12px;
-		justify-content: center;
-		justify-self: center;
-		/* margin-inline-start: 1rem; */
+		width: 20rem;
 	}
 }
