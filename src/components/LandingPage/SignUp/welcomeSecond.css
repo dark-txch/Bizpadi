@@ -50,7 +50,6 @@ form.form-frame label,
 form.form-frame input,
 form.form-frame select {
 	display: block;
-	width: 100%;
 }
 
 div.frame {
@@ -109,8 +108,11 @@ div.estimate {
 }
 
 div.biz-btns {
-	margin-left: 6.4rem;
+	display: flex;
+	justify-content: end;
+	margin-left: 5.3rem;
 	margin-block-start: 1rem;
+	width: 100%;
 }
 
 .biz-btn {
@@ -134,7 +136,7 @@ div.stage {
 	width: 50%;
 	position: relative;
 	z-index: 1;
-	padding-top: 6rem;
+	padding-top: 5rem;
 	font-size: 1.1rem;
 }
 
@@ -237,26 +239,20 @@ div.log-out3 {
 		width: 21rem;
 	}
 
-	.biz-form p {
-		/* text-align: center; */
-	}
-
-	form .frame label {
-		/* width: 20rem; */
-	}
-
 	form .frame input {
-		/* width: 19rem; */
 		height: 2.875rem;
 	}
 
 	.estimate select,
 	.frame .estimate input {
-		width: 8.9rem;
+		width: 90%;
 	}
 
 	div.biz-btns {
-		margin-left: 6.4rem;
+		display: flex;
+		justify-content: end;
+		margin-left: 2rem;
+		width: 90%;
 	}
 }
 
@@ -275,17 +271,20 @@ div.log-out3 {
 		align-items: center;
 	}
 
-	form.form-frame input {
-		width: 100%;
+	form .frame input {
+		/* width: 19rem; */
+		height: 2.875rem;
 	}
 
 	.estimate select,
-	.estimate input {
-		width: 20rem;
-		font-size: 0.95rem;
+	.frame .estimate input {
+		width: 15rem;
 	}
 
 	div.biz-btns {
-		margin-left: 6.4rem;
+		display: flex;
+		justify-content: end;
+		margin-left: 10rem;
+
 	}
 }
