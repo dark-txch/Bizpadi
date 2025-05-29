@@ -125,8 +125,6 @@
 		/* height: 100vh; */
 		padding: 0 1.5rem;
 		flex-direction: column;
-
-		border: 1px solid red;
 	}
 
 	/* CONTAINER FOR THE HEADING AND PARAGRAPH */
@@ -171,13 +169,13 @@
 		right: 0.5rem;
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
-		pointer-events: none; /* don't allow clicks when visible */
+		pointer-events: none; 
 		z-index: 99;
 	}
 
 	.mobileMenuButton.visible {
 		opacity: 1;
-		pointer-events: auto; /* allow clicks when visible */
+		pointer-events: auto;
 	}
 
 	.mobileMenuLinks {
