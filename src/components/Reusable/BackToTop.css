@@ -1,0 +1,24 @@
+.backToTopBtn {
+	position: fixed;
+	bottom: 2rem;
+	right: 0;
+	font-size: 2rem;
+	transition: transform 0.3s ease;
+	cursor: pointer;
+	color: #00517a;
+	background-color: transparent;
+}
+
+@keyframes oscillate {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.backToTopBtn {
+	animation: oscillate 1.5s ease-in-out infinite;
+}

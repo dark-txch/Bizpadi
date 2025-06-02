@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import CopyRight from "../Reusable/CopyRight";
 import TinyScreens from "../Reusable/TinyScreens";
 import "./LandingPage.css";
+import BackToTop from "../Reusable/BackToTop";
 
 export default function LandingPage() {
 	return (
@@ -22,6 +23,7 @@ export default function LandingPage() {
 			<Footer />
 			<CopyRight />
 			<TinyScreens />
+			<BackToTop />
 		</motion.div>
 	);
 }
